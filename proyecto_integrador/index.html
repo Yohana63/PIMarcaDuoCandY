@@ -6,17 +6,24 @@
     <title>"NOMBRE JUEGO” | Web Oficial | Open System Gaming</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="shortcut icon" href="icon/favicon.jpg" type="image/x-icon"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 <body id="index">
-    <!--Menú-->
     <div class="container">
         <div class="logo">OPEN SYSTEM GAMING</div>
         <div class="Nombre">| NOMBRE JUEGO</div>
         <div class="juego">   <a href="#seccion-somos"> QUIENES SOMOS</a> JUEGOS PERSONAJES CONTACTO</div>     
         <div class="IniciarSesion"><a href="iniciarSesion.html">"Iniciar Sesion"</a> / <a href="registrarse.html">"Registrarse"</a></div>
     </div>
-    <!--PRINCIPAL-->
-    <div class="container2"> </div>
+    <!-- Imagen principal que se cambiará -->
+    <div>
+        <img id="imagen-principal" src="img/inicio.jpg" alt="Imagen inicial">
+    </div>
+
+    <!-- Secciones de la página -->
+    <section id="seccion-1">
+        <div class="container2"> </div>
     <div class="azul">
     <div class="nombrejuego">
     <h1>NOMBRE JUEGO</h1> 
@@ -24,7 +31,7 @@
     <div class="textoinicio">
     <div class="textoamarillo1"><h2>FECHA DE LANZAMIENTO:</h2> <h3>xx/xx/xxxx</h3> </div>   <div class="textoamarillo2"><h2>GÉNERO:</h2><h3>rol, mundo abierto</h3> </div><div class="textoamarillo4"><h2>DESARROLLADO POR: </h2><h3>G4 Technology</h3></div>
     </div>
-
+    <img id="imagen2" src="img/noticias.jpg" style="display: none;">
     <br>
     <!--QUIENES SOMOS-->
     <div class="somos">
@@ -40,37 +47,88 @@
          <img class="image" src="img/quienesomos.png">
         </div>
 </div>
-    <br>
-    <!--NOTICIAS-->
-    <h1>NOTICIAS</h1>
+    </section>
 
-
-    <h2>VER MÁS NOTICIAS</h2>
-
-    <!--EXPANSIONESS-->
-    <h1>EXPANSIONES</h1>
-    <br>
+    <section id="seccion-2">
+        <br>
+        <!--NOTICIAS-->
+        <div class="noticias">
+        <h1>NOTICIAS</h1>
     
     
-    <!--OTROS JUEGOS-->
-    <h1>TAMBIÉN TE PUEDE INTERESAR</h1>
-    <h3>Nombre juego 1</h3>
-    <h3>Nombre juego 2</h3>
-    <h3>Nombre juego 3</h3>
-    <h3>Nombre juego 4</h3>
+        <h2>VER MÁS NOTICIAS</h2>
+    </div>
+    </section>
 
-    <h2>TODOS LOS JUEGOS</h2>
+    <section id="seccion-3">
+        <h1>EXPANSIONES</h1>
+        <br>
+        
+        
+        <!--OTROS JUEGOS-->
+        <h1>TAMBIÉN TE PUEDE INTERESAR</h1>
+        <h3>Nombre juego 1</h3>
+        <h3>Nombre juego 2</h3>
+        <h3>Nombre juego 3</h3>
+        <h3>Nombre juego 4</h3>
     
-    <br>
-    <!--FINAL DE PÁGINA-->
-    <h1>Open System Gaming</h1>
+        <h2>TODOS LOS JUEGOS</h2>
+        
+        <br>
+        <!--FINAL DE PÁGINA-->
+        <h1>Open System Gaming</h1>
+    
+        <h3>QUIENES SOMOS</h3>
+        <h3>JUEGOS</h3>
+        <h3>PERSONAJES</h3>
+        <h3>CONTACTO</h3>
+    
+        ¿Alguna pregunta? <a href="contacto.html">"Atención al cliente"</a>
+    
+    </section>
+    <script>
+        $(function(){
+            //captura del evento para mosrar u ocultar el menu
+            $(".icon").click(function(){
+                $(".menu_item").toggle();
+            });
+            $(window).resize(function(){
+                var anchura = $(this).width();
+                if (anchura > 800) {
+                    $(".menu_item").show();
+                }
+            });
+        });
+    </script>
+    <!-- JavaScript para cambiar la imagen principal cuando se desplaza -->
+    <script>
+        // Obtenemos el elemento de la imagen principal
+        const imagenPrincipal = document.getElementById('imagen-principal');
 
-    <h3>QUIENES SOMOS</h3>
-    <h3>JUEGOS</h3>
-    <h3>PERSONAJES</h3>
-    <h3>CONTACTO</h3>
+        // Función para cambiar la imagen principal
+        function cambiarImagen() {
+            const seccion1 = document.getElementById('seccion-1');
+            const seccion2 = document.getElementById('seccion-2');
+            const seccion3 = document.getElementById('seccion-3');
 
-    ¿Alguna pregunta? <a href="contacto.html">"Atención al cliente"</a>
+            // Obtenemos la posición de desplazamiento
+            const scrollPosition = window.scrollY;
 
+            // Comparamos la posición de desplazamiento con las posiciones de las secciones
+            if (scrollPosition >= 200000) {
+                // Si el usuario está en la sección 3 o más abajo
+                imagenPrincipal.src = 'img/personajes.jpg';
+            } else if (scrollPosition >= 100) {
+                // Si el usuario está en la sección 2
+                imagenPrincipal.src = 'img/juegos/noticias.jpg';
+            } else if (scrollPosition >= 80) {
+                // Si el usuario está en la sección 1
+                imagenPrincipal.src = 'img/inicio.jpg';
+            }
+        }
+
+        // Escuchamos el evento de desplazamiento de la ventana
+        window.addEventListener('scroll', cambiarImagen);
+    </script>
 </body>
 </html>

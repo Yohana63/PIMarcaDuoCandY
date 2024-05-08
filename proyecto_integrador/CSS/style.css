@@ -89,54 +89,50 @@ p{
 .container{
     color: #fff;
     position: fixed;
-  top: 0;  
-  left: 0;
-    width:100% ;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 50px;
     background-color: black;
     z-index: 2;
+    padding: 0 10px;
 }
 .logo{
     color: #fff;
-    position:absolute;
-    top: 0;  
-    left: 0;
-    width:auto;
     padding: 15px;
 }
 .Nombre{
-    position:absolute;
+    position: absolute;
     padding-left: 210px;
-    padding-top: 15px;
 }
 .juego{
-    position:absolute;
+    position: absolute;
     padding-left: 600px;
     padding-top: 15px;
     word-spacing: 20px;
 }
 
-.IniciarSesion{
-    display: flex; 
-    justify-content: center; 
+.IniciarSesion {
+    display: flex;
+    justify-content: center;
     align-items: center;
     background-color: #DDBD3C;
     width: 250px;
     height: 30px;
     border-radius: 20px;
-    color: white;
-    position:absolute;
-    right: 0;
+    position: absolute;
+    right: 10px;
     top: 10px;
     padding-right: 2px;
-    color: black; 
+    color: black;
 }
 a{
     text-decoration: none;
 }
 .IniciarSesion a{
-    color: black;  
+    color:black; 
 }
+
 /*inicio*/
 .container2{
     width: 100%;
@@ -145,7 +141,7 @@ a{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
-    background: url(../img/inicio.jpg),url(../img/noticias.jpg);
+    background: url(../img/inicio.jpg);
     background-repeat: repeat-x;
     position: fixed;
     top: 0; 
@@ -229,6 +225,7 @@ a{
     width: 100%;
     height: 600px;
     position: relative;
+    background-color: #D0A933;
 }
 .somos img{
     width: 400px;
@@ -261,6 +258,61 @@ text-shadow: 2px 2px 5px rgb(15, 14, 14, 0.75);
 .juego a{
     color: white;  
 }
+.noticias{
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    margin-top: 1400px;
+    background-color: #33c0d0;
+}
 
+@media screen and (max-width: 768px) {
+    /* Cambios para pantallas más pequeñas */
+    .Nombre, .juego {
+        padding-left: 0;
+        padding-top: 5px;
+    }
 
+    .IniciarSesion {
+        width: auto;
+        padding: 10px;
+        top: 15px;
+        right: 10px;
+    }
 
+    /* Ajusta la disposición de los elementos de navegación en pantallas pequeñas */
+    .container {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+    }
+
+    .juego {
+        order: 1;
+        padding: 10px;
+    }
+
+    .Nombre {
+        order: 2;
+    }
+
+    .IniciarSesion {
+        order: 3;
+    }
+}
+
+/* Más media queries para otros puntos de quiebre si es necesario */
+@media screen and (max-width: 800px) {
+    /* Cambios para pantallas aún más pequeñas */
+    /* Ajusta tamaños, márgenes, y posiciones para pantallas muy pequeñas */
+    .Nombre{
+        display: none; /* Oculta elementos no esenciales en pantallas muy pequeñas */
+    }
+}
+@media screen and (max-width: 1000px) {
+    /* Cambios para pantallas aún más pequeñas */
+    /* Ajusta tamaños, márgenes, y posiciones para pantallas muy pequeñas */
+    .juego {
+        display: none; /* Oculta elementos no esenciales en pantallas muy pequeñas */
+    }
+}
