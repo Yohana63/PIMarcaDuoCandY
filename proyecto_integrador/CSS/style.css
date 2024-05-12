@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
 }
-body{
+body#loginYsignin{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
 }
@@ -26,31 +26,34 @@ body#registrarse {
     background: #fff;
     margin-top: 100px;
 }
-h1{
+h1#ttl{
     padding-top: 20px;
     text-align: center;
     color: #1a2537;
     font-size: 40px;
 }
-h3{
+h3#ttl3{
     margin: 0;
+    flex: 1; /* El texto ocupa el espacio restante */
 }
-img{
+img#imagenform{
     padding-top: 4px;
     width: 35px;
     height: 35px;
     text-align: center;
 }
-input[type="text"], input[type="password"]{
-    text-align: center;
-    font-size: 20px;
-    width: 80%;
-    padding: 10px;
-    border: none;
-}
 .input-contenedor{
     margin-bottom: 15px;
     border: 1px solid #aaa;
+}
+.icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+.imput-contenedor {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
 }
 .button{
     border: none;
@@ -84,6 +87,7 @@ p{
         border-radius: 2%;
     }
 }
+
 
 /*menu*/
 .container{
