@@ -85,52 +85,81 @@ p{
     }
 }
 
-/*menu*/
-.container{
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    background-color: black;
-    z-index: 2;
-    padding: 0 10px;
-}
-.logo{
-    color: #fff;
-    padding: 15px;
-}
-.Nombre{
-    position: absolute;
-    padding-left: 210px;
-}
-.juego{
-    position: absolute;
-    padding-left: 600px;
-    padding-top: 15px;
-    word-spacing: 20px;
+/* Estilos para el menú */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333; /* Color de fondo del menú */
+    position: fixed; /* Fijar el menú en la parte superior */
+    top: 0; /* Posición superior */
+    width: 100%; /* Ancho del menú */
+    z-index: 1000; /* Superposición a otros elementos */
 }
 
-.IniciarSesion {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #DDBD3C;
-    width: 250px;
-    height: 30px;
-    border-radius: 20px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    padding-right: 2px;
-    color: black;
+/* Estilos para el logo */
+.menu .logo img {
+    height: 40px; /* Altura del logo */
 }
-a{
+
+/* Estilos para los enlaces de navegación */
+.menu .nav-links,
+.menu .auth-links {
+    list-style: none; /* Elimina marcadores de lista */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox para disposición */
+}
+
+/* Estilos para los enlaces de navegación */
+.menu .nav-links a {
+    margin: 0 10px; /* Espacio entre elementos */
+    color: white;
     text-decoration: none;
+    padding: 10px;
 }
-.IniciarSesion a{
-    color:black; 
+.menu .auth-links a {
+    margin: 0 10px; /* Espacio entre elementos */
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+.menu .auth-links a{
+    background-color: #fae017;
+}
+/* Cambia el color de fondo cuando se pasa el mouse sobre un enlace */
+.menu .nav-links a:hover {
+    background-color: #2d2d2d;
+}
+.menu .auth-links a:hover{
+    background-color: #ffec5c;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Estilos para reducir el tamaño de los enlaces de navegación y autenticación en pantallas pequeñas */
+    .menu .nav-links,
+    .menu .auth-links {
+        flex-direction: column; /* Disponer los elementos en columna */
+        align-items: center; /* Centrar los elementos */
+        height: 100px;
+       
+    }
+    
+    /* Ajustar el tamaño de las fuentes y espacios */
+    .menu .nav-links li,
+    .menu .auth-links a {
+        margin: 5px 0; /* Reducir espacios entre elementos */
+        font-size: 14px; /* Ajustar el tamaño de la fuente */
+    }
+    .menu .nav-links li {
+        padding: 0px;
+    }
+    .menu .auth-links a {
+        padding: 5px;
+    }
 }
 
 /*inicio*/
