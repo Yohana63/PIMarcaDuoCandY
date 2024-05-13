@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
 }
-body#loginYsignin{
+body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
 }
@@ -26,34 +26,31 @@ body#registrarse {
     background: #fff;
     margin-top: 100px;
 }
-h1#ttl{
+h1{
     padding-top: 20px;
     text-align: center;
     color: #1a2537;
     font-size: 40px;
 }
-h3#ttl3{
+h3{
     margin: 0;
-    flex: 1; /* El texto ocupa el espacio restante */
 }
-img#imagenform{
+img{
     padding-top: 4px;
     width: 35px;
     height: 35px;
     text-align: center;
 }
+input[type="text"], input[type="password"]{
+    text-align: center;
+    font-size: 20px;
+    width: 80%;
+    padding: 10px;
+    border: none;
+}
 .input-contenedor{
     margin-bottom: 15px;
     border: 1px solid #aaa;
-}
-.icon {
-    width: 35px;
-    height: 35px;
-    margin-right: 10px; /* Espacio entre el icono y el texto */
-}
-.imput-contenedor {
-    display: flex;
-    align-items: center; /* Alinea verticalmente los elementos */
 }
 .button{
     border: none;
@@ -88,46 +85,17 @@ p{
     }
 }
 
-<<<<<<< HEAD
 /* Estilos para el menú */
 .menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #333; /* Color de fondo del menú */
-    position: fixed; /* Fijar el menú en la parte superior */
-    top: 0; /* Posición superior */
+    background-color: #333; 
+    position: fixed; 
+    top: 0; 
     width: 100%; /* Ancho del menú */
-    z-index: 1000; /* Superposición a otros elementos */
-=======
-
-/*menu*/
-.container{
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    background-color: black;
-    z-index: 2;
-    padding: 0 10px;
-}
-.logo{
-    color: #fff;
-    padding: 15px;
-}
-.Nombre{
-    position: absolute;
-    padding-left: 210px;
-}
-.juego{
-    position: absolute;
-    padding-left: 600px;
-    padding-top: 15px;
-    word-spacing: 20px;
->>>>>>> a72fac52fb9ab3bd66dc4b92cdda7226196f2a68
+    z-index: 1000; 
 }
 
 /* Estilos para el logo */
@@ -138,10 +106,10 @@ p{
 /* Estilos para los enlaces de navegación */
 .menu .nav-links,
 .menu .auth-links {
-    list-style: none; /* Elimina marcadores de lista */
+    list-style: none; 
     padding: 0;
     margin: 0;
-    display: flex; /* Flexbox para disposición */
+    display: flex; 
 }
 
 /* Estilos para los enlaces de navegación */
@@ -161,7 +129,6 @@ p{
 .menu .auth-links a{
     background-color: #fae017;
 }
-/* Cambia el color de fondo cuando se pasa el mouse sobre un enlace */
 .menu .nav-links a:hover {
     background-color: #2d2d2d;
 }
@@ -171,10 +138,9 @@ p{
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
-    /* Estilos para reducir el tamaño de los enlaces de navegación y autenticación en pantallas pequeñas */
     .menu .nav-links,
     .menu .auth-links {
-        flex-direction: column; /* Disponer los elementos en columna */
+        flex-direction: column;
         align-items: center; /* Centrar los elementos */
         height: 100px;
        
@@ -183,8 +149,8 @@ p{
     /* Ajustar el tamaño de las fuentes y espacios */
     .menu .nav-links li,
     .menu .auth-links a {
-        margin: 5px 0; /* Reducir espacios entre elementos */
-        font-size: 14px; /* Ajustar el tamaño de la fuente */
+        margin: 5px 0; 
+        font-size: 14px; 
     }
     .menu .nav-links li {
         padding: 0px;
@@ -333,46 +299,41 @@ text-shadow: 2px 2px 5px rgb(15, 14, 14, 0.75);
         padding-left: 0;
         padding-top: 5px;
     }
-
     .IniciarSesion {
         width: auto;
         padding: 10px;
         top: 15px;
         right: 10px;
     }
-
-    /* Ajusta la disposición de los elementos de navegación en pantallas pequeñas */
     .container {
         display: flex;
         justify-content: space-between;
         padding: 5px;
     }
+    .nombrejuego h1{
+        font-size: 50px;
+        position:absolute;
+        margin-top: -50px;
+        margin-left: 220px; 
 
+    }
     .juego {
         order: 1;
         padding: 10px;
     }
-
     .Nombre {
         order: 2;
     }
-
     .IniciarSesion {
         order: 3;
     }
 }
-
-/* Más media queries para otros puntos de quiebre si es necesario */
 @media screen and (max-width: 800px) {
-    /* Cambios para pantallas aún más pequeñas */
-    /* Ajusta tamaños, márgenes, y posiciones para pantallas muy pequeñas */
     .Nombre{
         display: none; /* Oculta elementos no esenciales en pantallas muy pequeñas */
     }
 }
 @media screen and (max-width: 1000px) {
-    /* Cambios para pantallas aún más pequeñas */
-    /* Ajusta tamaños, márgenes, y posiciones para pantallas muy pequeñas */
     .juego {
         display: none; /* Oculta elementos no esenciales en pantallas muy pequeñas */
     }
