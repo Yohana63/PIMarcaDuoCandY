@@ -9,6 +9,7 @@ body{
     width: 100%;
     padding: 15px;
 }
+/*-------------------------------------------------*/
 /*Iniciar Sesión y Registrarse*/
 body.iniciosesion {
     background: url(../img/iniciosesion.jpg);
@@ -84,7 +85,7 @@ p{
         border-radius: 2%;
     }
 }
-
+/*---------------------------------------------------*/
 /* Estilos para el menú */
 .menu {
     display: flex;
@@ -135,17 +136,61 @@ p{
 .menu .auth-links a:hover{
     background-color: #ffec5c;
 }
+.icon {
+    display: none; /* Ocultar el icono en pantallas grandes */
+    cursor: pointer;
+}
+
+/* Estilos para el icono de hamburguesa en pantallas pequeñas */
+.menu .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menuhamburguer {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+}
+
+/* Estilos para la barra de navegación */
+
+/* Estilos para los elementos del menú */
+.menu .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.menu .nav-links li {
+    margin: 0 10px;
+}
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
-    .menu .nav-links,
     .menu .auth-links {
         flex-direction: column;
         align-items: center; /* Centrar los elementos */
         height: 100px;
        
     }
-    
+    .menu .nav-links {
+        display: none; /* Ocultar la lista del menú en pantallas pequeñas */
+    }
+
+    .icon {
+        display: block;
+        padding-left: 10px;
+    }
     /* Ajustar el tamaño de las fuentes y espacios */
     .menu .nav-links li,
     .menu .auth-links a {
@@ -153,13 +198,13 @@ p{
         font-size: 14px; 
     }
     .menu .nav-links li {
-        padding: 0px;
+        padding: 10px;
     }
     .menu .auth-links a {
         padding: 5px;
     }
 }
-
+/*---------------------------------------------------*/
 /*inicio*/
 .container2{
     width: 100%;
@@ -180,86 +225,37 @@ p{
     font-family: fantasy;
     color: #D0A933;
     font-size: 100px;
-    position:absolute;
-    margin-top: -80px;
-    margin-left: 420px; 
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    text-align: center;
     text-shadow: 2px 2px 5px #0f0e0e;
 }
 .azul{
     width: 100%;
     height: 2000px;
     background-color: rgb(171, 186, 255,0.75);
-    position:absolute;
+    position:relative;
     margin-top: 500px;
 }
 .textoinicio{
         width: 100%;
-        height: 300px;
+        height: 400px;
+        position: relative;
         
-}
-.textoamarillo1 h2{
-    color: #DDBD3C;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    align-items: center;
-    position: absolute;
-    margin-top: 150px;
-    margin-left: 260px;
-    text-shadow: 2px 2px 5px #0f0e0e;
-}
-.textoamarillo1 h3{
-    color: black;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    align-items: center;
-    position: absolute;
-    margin-top: 152px;
-    margin-left: 560px;
-}
-.textoamarillo2 h2{
-    color: #DDBD3C;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    align-items: center;
-    position: absolute;
-    margin-top: 150px;
-    margin-left: 800px;
-    text-shadow: 2px 2px 5px #0f0e0e;
-}
-.textoamarillo2 h3{
-    color: black;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    align-items: center;
-    position: absolute;
-    margin-top: 155px;
-    margin-left: 910px;
-}
-.textoamarillo4 h2{
-    color: #DDBD3C;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    align-items: center;
-    position: absolute;
-    margin-top: 225px;
-    margin-left:  490px;
-    text-shadow: 2px 2px 5px #0f0e0e;
-}
-.textoamarillo4 h3{
-    color: black;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    align-items: center;
-    position: absolute;
-    margin-top: 229px;
-    margin-left: 740px;
 }
 .somos{
     width: 100%;
-    height: 600px;
+    height: auto;
     position: relative;
-    background-color: #D0A933;
 }
 .somos img{
-    width: 400px;
+    width: 25%;
     height: auto;
-    position: absolute;
-    margin-left: 950px;
-    margin-top: 100px;
+    display: flex;
+    margin-left: 70%;
+    padding-top: 4%;
     
 }
 .somos h1{
@@ -267,20 +263,23 @@ p{
     color: #DDBD3C;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     position: absolute;
-    margin-top: 20px;
-    margin-left: 300px;
+    top: 5%;
+    left: 40%;
+    transform: translate(-50%, -50%);
 }
 .somostexto{
-    padding-top: 150px;
-    width: 800px;
-    height: auto;
+    padding-top: 120px;
+    width: 70%;
+    height: 70%;
     position: absolute;
-    margin-left: 40px;
 }
 .somostexto p{
 font-size: 20px;
 color: beige;
 text-shadow: 2px 2px 5px rgb(15, 14, 14, 0.75);
+display: flex;
+padding-left: 6%;
+padding-right: 6%;
 }
 .juego a{
     color: white;  
@@ -327,6 +326,24 @@ text-shadow: 2px 2px 5px rgb(15, 14, 14, 0.75);
     .IniciarSesion {
         order: 3;
     }
+    .somos img{
+        display: none;
+    }
+    .somostexto{
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        }
+        .somos h1{
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .nombrejuego h1{
+            transform: translate(-170%, 50%);
+        }
+        
 }
 @media screen and (max-width: 800px) {
     .Nombre{
@@ -338,3 +355,4 @@ text-shadow: 2px 2px 5px rgb(15, 14, 14, 0.75);
         display: none; /* Oculta elementos no esenciales en pantallas muy pequeñas */
     }
 }
+
