@@ -126,9 +126,24 @@
         
         </div>
         <hr class="barra">
-        <!--div personajes-->
+        <!--div personajes-->  
+        <div class="titulopersonajes"> 
+        <h1>PERSONAJES</h1>
+        </div>  
         <div class="personajes">
-            <h1>personajes</h1>
+            <div id="carrusel">
+                <div class="flecha" onclick="moverIzquierda()"><img src="img/flechaizquierda.png" alt=""></div>
+                <div id="personajes">
+                  <!-- Añade aquí tus personajes con divs o cualquier otro elemento HTML -->
+                  <div class="personaje"><img src="img/rayo.png.webp" alt=""><h3>Rayo Volante<p>Un hábil espadachín con una velocidad impresionante, conocido por sus ataques precisos y su capacidad para anticipar los movimientos enemigos.</p></h3></div>
+                  <div class="personaje"><img src="img/mago.png" alt=""><h3>Eldorin el Sabio<p>Un anciano mago con una larga barba blanca y un sombrero. Es conocido por su sabiduría  y su profundo conocimiento de los secretos arcanos. Siempre dispuesto a ayudar a aquellos que buscan la verdad.</p></h3></div>
+                  <div class="personaje"><img src="img/guerrero.png" alt=""><h3>El Guerrero Forjado <p> Un coloso de armadura imponente y un corazón endurecido. Es un guerrero indomable que lucha por la justicia en un mundo lleno de caos. Su espada es tan afilada como su ingenio, y su lealtad es inquebrantable.</p></h3></div>
+                  <div class="personaje"><img src="img/guerrera.png" alt=""><h3>Lyra la Cazadora<p>Una guerrera intrépida con ojos penetrantes y una habilidad con el arco y flecha. Lyra ha jurado proteger su reino de las fuerzas oscuras. Su valentía y determinación son legendarias.</p></h3></div>
+                  <div class="personaje"><img src="img/elfa.png" alt=""><h3>Lunaerrante<p>Una elfa que viaja por los bosques. Experta en el arte de la arquería y la magia. Se comunica con los espíritus, y su arco encantado dispara flechas con la energía de la luna.</p></h3></div>
+                  <!-- ... -->
+                </div>
+                <div class="flecha" onclick="moverDerecha()"><img src="img/flechaderecha.png" alt=""></div>
+              </div>
         </div>
         <!--div expansiones-->
         <div class="expansiones">
@@ -171,35 +186,47 @@
             });
         });
     </script>
-    <!-- JavaScript para cambiar la imagen principal cuando se desplaza -->
+    <!-- JavaScript para personajes -->
     <script>
-        // Obtenemos el elemento de la imagen principal
-        const imagenPrincipal = document.getElementById('imagen-principal');
+       let indiceActual = 0; // El índice del personaje actualmente visible
+const personajes = document.querySelectorAll('.personaje'); // Todos tus personajes
 
-        // Función para cambiar la imagen principal
-        function cambiarImagen() {
-            const seccion1 = document.getElementById('seccion-1');
-            const seccion2 = document.getElementById('seccion-2');
-            const seccion3 = document.getElementById('seccion-3');
+function actualizarPersonajes() {
+  personajes.forEach((personaje, indice) => {
+    if (indice === indiceActual) {
+      personaje.classList.add('central');
+      personaje.style.transform = 'scale(1)';
+    } else {
+      personaje.classList.remove('central');
+      personaje.style.transform = 'scale(0.6)';
+    }
+  });
+}
 
-            // Obtenemos la posición de desplazamiento
-            const scrollPosition = window.scrollY;
+function moverDerecha() {
+  if (indiceActual < personajes.length - 1) {
+    indiceActual++;
+    actualizarPersonajes();
+  } else {
+    // Opcional: volver al primer personaje si es el último
+    indiceActual = 0;
+    actualizarPersonajes();
+  }
+}
 
-            // Comparamos la posición de desplazamiento con las posiciones de las secciones
-            if (scrollPosition >= 200000) {
-                // Si el usuario está en la sección 3 o más abajo
-                imagenPrincipal.src = 'img/personajes.jpg';
-            } else if (scrollPosition >= 100) {
-                // Si el usuario está en la sección 2
-                imagenPrincipal.src = 'img/juegos/noticias.jpg';
-            } else if (scrollPosition >= 80) {
-                // Si el usuario está en la sección 1
-                imagenPrincipal.src = 'img/inicio.jpg';
-            }
-        }
+function moverIzquierda() {
+  if (indiceActual > 0) {
+    indiceActual--;
+    actualizarPersonajes();
+  } else {
+    // Opcional: ir al último personaje si es el primero
+    indiceActual = personajes.length - 1;
+    actualizarPersonajes();
+  }
+}
 
-        // Escuchamos el evento de desplazamiento de la ventana
-        window.addEventListener('scroll', cambiarImagen);
+// Inicializar el carrusel al cargar la página
+document.addEventListener('DOMContentLoaded', actualizarPersonajes);
     </script>
     
 </body>

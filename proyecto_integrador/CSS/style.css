@@ -36,11 +36,11 @@ h1{
 h3{
     margin: 0;
 }
-img{
+/*img{
     width: 35px;
     height: 35px;
     text-align: center;
-}
+}*/
 input[type="text"], input[type="password"]{
     text-align: center;
     font-size: 20px;
@@ -409,9 +409,63 @@ display: flex;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 /*div personajes*/
-.personajes{
-    background-color:coral ;
+
+.titulopersonajes h1{
+    font-size: 40px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    color: #ddbd3c;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 2px 2px 5px #0f0e0e;
 }
+#personajes {
+    display: flex;
+  }
+  .personajes div{
+    display: flex;
+    justify-content: center;
+    margin: 4%;
+  }
+  .personaje h3{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ddbd3c;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 2px 2px 5px #0f0e0e;
+  }
+  .personaje p{
+    color: white;
+    text-shadow: 2px 2px 5px #0f0e0e;
+    font-size: 15px;
+    width: 150%;
+    height: auto;
+  }
+  .personaje img{
+    height: 250px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+  }
+  .flecha img{
+    height: 50px;
+    width: auto;
+  }
+  
+  .personaje {
+    transform: scale(0.6); /* Hace los personajes más pequeños */
+    transition: transform 0.5s;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .personaje.central {
+    transform: scale(1); /* Hace el personaje central más grande */
+  }
 /*div expansiones*/
 .expansiones{
     background-color:darksalmon ;
@@ -424,7 +478,6 @@ display: flex;
 .final{
     background-color:gainsboro ;
 }
-
 
 
 
@@ -477,6 +530,35 @@ display: flex;
         transform: translate(-170%, 50%);
     }
         
+}
+@media screen and (max-width: 768px) {
+      .personajes div{
+        flex-direction: column;
+      }
+      .personaje h3{
+        font-size: 20px;
+      }
+      .personaje p{
+        font-size: 15px;
+      }
+      .personaje img{
+        height: 150px;
+        width: auto;
+      }
+      .flecha img{
+        display: none;
+      }
+      
+      .personaje {
+        transform: scale(0.6); /* Hace los personajes más pequeños */
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .personaje.central {
+        display: none;
+      }
+    
 }
 @media screen and (max-width: 800px) {
     .Nombre{
