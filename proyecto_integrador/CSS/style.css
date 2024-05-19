@@ -158,10 +158,55 @@ p{
 .hamburger {
     width: 25px;
     height: 3px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     margin: 5px 0;
 }
+ul{
+    list-style: none;
+}
+/*Daremos estilo a nuestro menú principal, contenido en la clase nav*/
+.icon li a{
+    /*Los elementos a están en el li directamente en le clase nav, heredarán las
+    propiedades que indicamos a continuación*/
+    background-color:black;
+    color: azure;
+    
+    /*Le asignamos un padding de top y bottom de 10 px, y laterales de 15px.
+    Esto es según vuestras características, no hace falta coger el mismo valor.*/
+    padding: 10px 15px;
 
+    /*Por defecto, los elementos están en línea, y si los dejamos como tal, se solapan.
+Para evitar el solapamiento, convertimos los elementos a bloque (block), y conseguimos el resultado de un conjunto de cajas alineadas.*/
+display:block;
+}
+
+.icon li a:hover{
+    background-color: rgb(28, 28, 28);
+}
+.icon >li{
+    /*Indicamos que los elementos directos a li en nav, tengan las sguientes caracteristicas*/
+    float:left;
+}
+.icon li ul{
+    /* Ocultamos los submenus, y luego los vamos a mostrar*/
+    display: none;
+    /*Establecer posición absoluta a los submenus, con un tamaño minimo de 
+    anchura para que todos sean iguales*/
+    position: absolute;
+    min-width: 150px;
+
+}
+.icon li:hover >ul{
+    /*Mostramos los submenus cuando solo pasamos el raton por encima de la opcion marcada*/
+display: block;
+}
+.icon li ul li{
+    position: relative;
+}
+.icon li ul li ul{
+    right: -200px;
+    top: 1px;
+}
 /* Estilos para la barra de navegación */
 
 /* Estilos para los elementos del menú */
@@ -291,12 +336,15 @@ display: flex;
     text-shadow: 2px 2px 5px rgb(15, 14, 14, 0.75);
 }
 
-
-
 .barra {
     border: none; 
     border-top: 3px solid  #111B2E;
     width: 80%;
+  }
+  .barra2 {
+    border: none; 
+    border-top: 3px solid  #ffffffea;
+    width: 90%;
   }
 /*div noticias*/
 .noticias{
@@ -467,16 +515,192 @@ display: flex;
     transform: scale(1); /* Hace el personaje central más grande */
   }
 /*div expansiones*/
+.tituloexpansiones{
+    background-color:#111b2eb5;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 2px 2px 5px #0f0e0e;
+    border-top: 2px solid black; 
+}
+.tituloexpansiones h1{
+    color: #ddbd3c;
+}
 .expansiones{
-    background-color:darksalmon ;
+    background-color:#111b2eb5;
+    justify-content: center;
+}
+.fotos{
+    width: 100%;
+    margin: 0 auto;
+}
+.container::after{
+    /*Muestra elementos aunque sean flotantes*/
+    content: "";
+    display: block;
+    height: 0px;
+    clear: both;
+}
+.container{
+    width: 100%;
+    padding-left: 8%;
+}
+/*Estructura de cada componente de la galeria (imagen+descripcion)*/
+.container div{
+width: auto;
+height: 40%;
+display: inline;
+float: left;
+margin: 1%;
+padding: 0px;
+}
+.container div img{
+    width: 150px;
+    height:200px;
+    box-shadow: 0 0 10px #00000089;
+    border: 2px solid #fff;
+}
+.container div img~span{
+    width: 100%;
+    display: flex;
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 2px 2px 5px #0f0e0e;
+
+}
+.container div img:hover+span{
+    opacity: 1;
+}
+.container:hover div{
+    opacity: 0.2;
+    transform: scale(0.7);
+    transition: 2s;
+}
+.container:hover div:hover{
+    opacity: 1;
+    transform: scale(1);
+}
+.informacion{
+    font-size: 30px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 2px 2px 5px #0f0e0e;
+    color: white;
+    padding-bottom: 2%;
+}
+ .visible {
+    color: white;
+    padding: 0% 10% 5% 10%;
+}
+.intro {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+.oculto {
+    display: none;
+    color: white;
+}
+.visible {
+    display: block;
 }
 /*div juegos*/
 .juegos{
-    background-color:firebrick ;
+    background-color:#111b2eb5;
+    justify-content: center;
+    padding-top: 5%;
+    padding-bottom: 30%;
+
 }
+.juegos h1{
+    color: white;
+    font-size: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10%;
+    text-shadow: 2px 2px 5px #0f0e0e;
+}
+
+div.contenedor{
+    width: 20%;
+    height: 20%;
+    float: left;
+    transition: height .4s;
+    }
+    div#uno{
+        background-color: rgba(104, 131, 251, 0.75);
+        margin-right: 5%;
+        margin-left: 2%;
+        border-radius: 10px;
+    }
+    div#dos{
+        background-color: rgba(104, 131, 251, 0.75);
+        margin-right: 5%;
+        border-radius: 10px;
+    }
+    div#tres{
+        background-color: rgba(104, 131, 251, 0.75);
+        margin-right: 5%;
+        border-radius: 10px;
+    }
+    div#cuatro{
+        background-color: rgba(104, 131, 251, 0.75);
+        margin-right: 2%;
+        border-radius: 10px;
+    }
+    
+    img.icon{
+        display: block;
+        margin: 50px auto;
+        background-color: rgba(255, 255, 255, .15);
+        width: 80%;
+        height: auto;
+        border-radius: 10%;
+        box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.399);
+        transition: box-shadow .5s;
+    }
+    
+    p.texto{
+        font-size: 1.2em;
+        color: white;
+        text-align: center;
+        padding-top: 10px;
+        opacity: .6;
+        transition: padding-top .4s;
+    }
+    div.contenedor:hover{
+        height: 40%;
+    }
+    div.contenedor:hover p.texto{
+        padding-top: 30px;
+        opacity: 1;
+        font-size: 1.3em;
+    }
+    div.contenedor:hover img.icon{
+        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, .6);
+    }
 /*div final*/
 .final{
-    background-color:gainsboro ;
+    background-color:black ;
+    padding: 5% 5% 4% 5%;
+    color: white;
+    display: block;
+}
+.final a{
+    color:#DDBD3C;
+    text-decoration: none;
+}
+.redes{
+    display: flex;
+    justify-content: flex-end;
+}
+.final p{
+    width: 40%;
+    display: flex;
 }
 
 
@@ -542,7 +766,7 @@ display: flex;
         font-size: 15px;
       }
       .personaje img{
-        height: 150px;
+        height: 400px;
         width: auto;
       }
       .flecha img{
@@ -554,10 +778,7 @@ display: flex;
         display: flex;
         flex-direction: column;
       }
-      
-      .personaje.central {
-        display: none;
-      }
+    
     
 }
 @media screen and (max-width: 800px) {
