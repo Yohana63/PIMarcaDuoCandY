@@ -9,6 +9,7 @@ body{
     width: 100%;
     padding: 15px;
 }
+/*-------------------------------------------------*/
 /*Iniciar Sesión y Registrarse*/
 /* body.iniciosesion {
     background: url(../img/iniciosesion.jpg);
@@ -49,6 +50,7 @@ h3#ttl3{
     margin: 0;
     flex: 1; /* El texto ocupa el espacio restante */
 }
+<<<<<<< HEAD
 /* img{
     padding-top: 4px;
     width: 35px;
@@ -62,6 +64,14 @@ img#imagenform{
     text-align: center;
 }
 /* input[type="text"], input[type="password"]{
+=======
+/*img{
+    width: 35px;
+    height: 35px;
+    text-align: center;
+}*/
+input[type="text"], input[type="password"]{
+>>>>>>> 936efa9c41a34f5859eaeb757e43a2b8d2697fdd
     text-align: center;
     font-size: 20px;
     width: 80%;
@@ -113,17 +123,17 @@ p{
         border-radius: 2%;
     }
 }
-
+/*---------------------------------------------------*/
 /* Estilos para el menú */
 .menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #333; 
+    background-color: black; 
     position: fixed; 
     top: 0; 
-    width: 100%; /* Ancho del menú */
+    width: 100%; 
     z-index: 1000; 
 }
 
@@ -164,17 +174,106 @@ p{
 .menu .auth-links a:hover{
     background-color: #ffec5c;
 }
+.icon {
+    display: none; /* Ocultar el icono en pantallas grandes */
+    cursor: pointer;
+}
+
+/* Estilos para el icono de hamburguesa en pantallas pequeñas */
+.menu .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menuhamburguer {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    margin: 5px 0;
+}
+ul{
+    list-style: none;
+}
+/*Daremos estilo a nuestro menú principal, contenido en la clase nav*/
+.icon li a{
+    /*Los elementos a están en el li directamente en le clase nav, heredarán las
+    propiedades que indicamos a continuación*/
+    background-color:black;
+    color: azure;
+    
+    /*Le asignamos un padding de top y bottom de 10 px, y laterales de 15px.
+    Esto es según vuestras características, no hace falta coger el mismo valor.*/
+    padding: 10px 15px;
+
+    /*Por defecto, los elementos están en línea, y si los dejamos como tal, se solapan.
+Para evitar el solapamiento, convertimos los elementos a bloque (block), y conseguimos el resultado de un conjunto de cajas alineadas.*/
+display:block;
+}
+
+.icon li a:hover{
+    background-color: rgb(28, 28, 28);
+}
+.icon >li{
+    /*Indicamos que los elementos directos a li en nav, tengan las sguientes caracteristicas*/
+    float:left;
+}
+.icon li ul{
+    /* Ocultamos los submenus, y luego los vamos a mostrar*/
+    display: none;
+    /*Establecer posición absoluta a los submenus, con un tamaño minimo de 
+    anchura para que todos sean iguales*/
+    position: absolute;
+    min-width: 150px;
+
+}
+.icon li:hover >ul{
+    /*Mostramos los submenus cuando solo pasamos el raton por encima de la opcion marcada*/
+display: block;
+}
+.icon li ul li{
+    position: relative;
+}
+.icon li ul li ul{
+    right: -200px;
+    top: 1px;
+}
+/* Estilos para la barra de navegación */
+
+/* Estilos para los elementos del menú */
+.menu .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.menu .nav-links li {
+    margin: 0 10px;
+}
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
-    .menu .nav-links,
     .menu .auth-links {
         flex-direction: column;
         align-items: center; /* Centrar los elementos */
         height: 100px;
        
     }
-    
+    .menu .nav-links {
+        display: none; /* Ocultar la lista del menú en pantallas pequeñas */
+    }
+
+    .icon {
+        display: block;
+        padding-left: 10px;
+    }
     /* Ajustar el tamaño de las fuentes y espacios */
     .menu .nav-links li,
     .menu .auth-links a {
@@ -182,13 +281,13 @@ p{
         font-size: 14px; 
     }
     .menu .nav-links li {
-        padding: 0px;
+        padding: 10px;
     }
     .menu .auth-links a {
         padding: 5px;
     }
 }
-
+/*---------------------------------------------------*/
 /*inicio*/
 .container2{
     width: 100%;
@@ -204,123 +303,446 @@ p{
     left: 0; 
     z-index: -1; 
 }
-
+.azul{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(104, 131, 251, 0.75);
+    position:relative;
+    margin-top: 500px;
+    z-index: 0;
+}
+/*div titulo*/
 .nombrejuego h1{
     font-family: fantasy;
     color: #D0A933;
     font-size: 100px;
-    position:absolute;
-    margin-top: -80px;
-    margin-left: 420px; 
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    text-align: center;
     text-shadow: 2px 2px 5px #0f0e0e;
+    z-index: 1;
 }
-.azul{
-    width: 100%;
-    height: 2000px;
-    background-color: rgb(171, 186, 255,0.75);
-    position:absolute;
-    margin-top: 500px;
-}
+/*div inicio*/
 .textoinicio{
-        width: 100%;
-        height: 300px;
-        
+display: flex;
 }
-.textoamarillo1 h2{
+.textoinicio h3{
     color: #DDBD3C;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 2px 2px 5px #0f0e0e;    
+    display: flex;
+    padding: 5%;
+}
+.textoinicio p{
+    color: black;
     align-items: center;
-    position: absolute;
-    margin-top: 150px;
-    margin-left: 260px;
+    font-family: 22px;
+}
+/*titulo somos*/
+.titulosomos h1{
+    font-size: 40px;
+    display: flex;
+    color: #ddbd3c;
+    flex-direction: column-reverse;
+    align-items: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-shadow: 2px 2px 5px #0f0e0e;
 }
-.textoamarillo1 h3{
-    color: black;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    align-items: center;
-    position: absolute;
-    margin-top: 152px;
-    margin-left: 560px;
-}
-.textoamarillo2 h2{
-    color: #DDBD3C;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    align-items: center;
-    position: absolute;
-    margin-top: 150px;
-    margin-left: 800px;
-    text-shadow: 2px 2px 5px #0f0e0e;
-}
-.textoamarillo2 h3{
-    color: black;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    align-items: center;
-    position: absolute;
-    margin-top: 155px;
-    margin-left: 910px;
-}
-.textoamarillo4 h2{
-    color: #DDBD3C;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    align-items: center;
-    position: absolute;
-    margin-top: 225px;
-    margin-left:  490px;
-    text-shadow: 2px 2px 5px #0f0e0e;
-}
-.textoamarillo4 h3{
-    color: black;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    align-items: center;
-    position: absolute;
-    margin-top: 229px;
-    margin-left: 740px;
-}
+/*div somos*/
 .somos{
-    width: 100%;
-    height: 600px;
-    position: relative;
-    background-color: #D0A933;
+    display: flex;
+  align-items: center;
 }
+
 .somos img{
     width: 400px;
     height: auto;
-    position: absolute;
-    margin-left: 950px;
-    margin-top: 100px;
+    margin: 2%;  
+}
+.textosomos{
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-size: 20px;
+    color: beige;
+    text-shadow: 2px 2px 5px rgb(15, 14, 14, 0.75);
+}
+
+.barra {
+    border: none; 
+    border-top: 3px solid  #111B2E;
+    width: 80%;
+  }
+  .barra2 {
+    border: none; 
+    border-top: 3px solid  #ffffffea;
+    width: 90%;
+  }
+/*div noticias*/
+.noticias{
+    display: flex;
+    padding-left: 5%;
+}
+.titulonoticia h1{
+    font-size: 40px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    color: #ddbd3c;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 2px 2px 5px #0f0e0e;
+
+}
+.card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    /*aplicar margenes con cartas*/
+    margin-top: 30px;
     
 }
-.somos h1{
-    text-shadow: 2px 2px 5px #0f0e0e;
-    color: #DDBD3C;
+.card .face{
+    width: 80%;
+    height:80%;
+    /*determina si la cara posterior de un elemento es visible de frente al usuario.
+    La cara posterior de un elemento siempre es un fondo transparente, permitiendo,
+    cuando es visible, que se muestre una imagen de espejo de la cara frontal. 
+    Tiene la propiedad visible: significa que la cara posterior es visible,
+    permitiendo que la cara frontal se muestre invertida. hidden: significa que 
+    la cara posterior no es visible, ocultando la cara frontal */
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.5s;
+    }
+    .card .front{
+        transform: perspective(600px) rotateY(0deg);
+        box-shadow: 0px 5px 10px #000;
+    }
+    .card .front img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .card .front h3{
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+        color: white;
+        background: rgb(0, 0, 0, 0.4);
+        text-align: center;
+    }
+    .card .back{
+        transform: perspective(600px) rotateY(180deg);
+        background: #111B2E;
+        padding: 15px;
+        color: #f3f3f3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        box-shadow: 0px 5px 10px #000; 
+    }
+    .card .back .link{
+        border-top: 1px solid #f3f3f3;
+        height: 50px;
+        line-height: 50px;
+    }
+    .card .back .link a{
+        color: #f3f3f3;
+    }
+    .card .back h3{
+        font-size: 30px;
+        margin-top: 20px;
+        letter-spacing: 2px;
+    }
+    .card .back p{
+        letter-spacing: 1px;
+    }
+    .card:hover .front{
+        transform: perspective(600px)rotateY(180deg);
+    }
+    .card:hover .back{
+        transform: perspective(600px)rotateY(360deg);
+    }
+/*mas noticias*/
+.masnoticias{
+    height: 50%;
+    width: 50%;
+    background-color: #111B2E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px #000; 
+    color: white;
+    margin: 20px;
+
+}
+.masnoticias a{
+    color: white;
+    text-decoration: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+/*div personajes*/
+
+.titulopersonajes h1{
+    font-size: 40px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    color: #ddbd3c;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    position: absolute;
-    margin-top: 20px;
-    margin-left: 300px;
+    text-shadow: 2px 2px 5px #0f0e0e;
 }
-.somostexto{
-    padding-top: 150px;
-    width: 800px;
+#personajes {
+    display: flex;
+  }
+  .personajes div{
+    display: flex;
+    justify-content: center;
+    margin: 4%;
+  }
+  .personaje h3{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ddbd3c;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 2px 2px 5px #0f0e0e;
+  }
+  .personaje p{
+    color: white;
+    text-shadow: 2px 2px 5px #0f0e0e;
+    font-size: 15px;
+    width: 150%;
     height: auto;
-    position: absolute;
-    margin-left: 40px;
+  }
+  .personaje img{
+    height: 250px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+  }
+  .flecha img{
+    height: 50px;
+    width: auto;
+  }
+  
+  .personaje {
+    transform: scale(0.6); /* Hace los personajes más pequeños */
+    transition: transform 0.5s;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .personaje.central {
+    transform: scale(1); /* Hace el personaje central más grande */
+  }
+/*div expansiones*/
+.tituloexpansiones{
+    background-color:#111b2eb5;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 2px 2px 5px #0f0e0e;
+    border-top: 2px solid black; 
 }
-.somostexto p{
-font-size: 20px;
-color: beige;
-text-shadow: 2px 2px 5px rgb(15, 14, 14, 0.75);
+.tituloexpansiones h1{
+    color: #ddbd3c;
 }
-.juego a{
-    color: white;  
+.expansiones{
+    background-color:#111b2eb5;
+    justify-content: center;
 }
-.noticias{
+.fotos{
     width: 100%;
-    height: 600px;
-    position: absolute;
-    margin-top: 1400px;
-    background-color: #33c0d0;
+    margin: 0 auto;
 }
+.container::after{
+    /*Muestra elementos aunque sean flotantes*/
+    content: "";
+    display: block;
+    height: 0px;
+    clear: both;
+}
+.container{
+    width: 100%;
+    padding-left: 8%;
+}
+/*Estructura de cada componente de la galeria (imagen+descripcion)*/
+.container div{
+width: auto;
+height: 40%;
+display: inline;
+float: left;
+margin: 1%;
+padding: 0px;
+}
+.container div img{
+    width: 150px;
+    height:200px;
+    box-shadow: 0 0 10px #00000089;
+    border: 2px solid #fff;
+}
+.container div img~span{
+    width: 100%;
+    display: flex;
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 2px 2px 5px #0f0e0e;
+
+}
+.container div img:hover+span{
+    opacity: 1;
+}
+.container:hover div{
+    opacity: 0.2;
+    transform: scale(0.7);
+    transition: 2s;
+}
+.container:hover div:hover{
+    opacity: 1;
+    transform: scale(1);
+}
+.informacion{
+    font-size: 30px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 2px 2px 5px #0f0e0e;
+    color: white;
+    padding-bottom: 2%;
+}
+ .visible {
+    color: white;
+    padding: 0% 10% 5% 10%;
+}
+.intro {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+.oculto {
+    display: none;
+    color: white;
+}
+.visible {
+    display: block;
+}
+/*div juegos*/
+.juegos{
+    background-color:#111b2eb5;
+    justify-content: center;
+    padding-top: 5%;
+    padding-bottom: 30%;
+
+}
+.juegos h1{
+    color: white;
+    font-size: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10%;
+    text-shadow: 2px 2px 5px #0f0e0e;
+}
+
+div.contenedor{
+    width: 20%;
+    height: 20%;
+    float: left;
+    transition: height .4s;
+    }
+    div#uno{
+        background-color: rgba(104, 131, 251, 0.75);
+        margin-right: 5%;
+        margin-left: 2%;
+        border-radius: 10px;
+    }
+    div#dos{
+        background-color: rgba(104, 131, 251, 0.75);
+        margin-right: 5%;
+        border-radius: 10px;
+    }
+    div#tres{
+        background-color: rgba(104, 131, 251, 0.75);
+        margin-right: 5%;
+        border-radius: 10px;
+    }
+    div#cuatro{
+        background-color: rgba(104, 131, 251, 0.75);
+        margin-right: 2%;
+        border-radius: 10px;
+    }
+    
+    img.icon{
+        display: block;
+        margin: 50px auto;
+        background-color: rgba(255, 255, 255, .15);
+        width: 80%;
+        height: auto;
+        border-radius: 10%;
+        box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.399);
+        transition: box-shadow .5s;
+    }
+    
+    p.texto{
+        font-size: 1.2em;
+        color: white;
+        text-align: center;
+        padding-top: 10px;
+        opacity: .6;
+        transition: padding-top .4s;
+    }
+    div.contenedor:hover{
+        height: 40%;
+    }
+    div.contenedor:hover p.texto{
+        padding-top: 30px;
+        opacity: 1;
+        font-size: 1.3em;
+    }
+    div.contenedor:hover img.icon{
+        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, .6);
+    }
+/*div final*/
+.final{
+    background-color:black ;
+    padding: 5% 5% 4% 5%;
+    color: white;
+    display: block;
+}
+.final a{
+    color:#DDBD3C;
+    text-decoration: none;
+}
+.redes{
+    display: flex;
+    justify-content: flex-end;
+}
+.final p{
+    width: 40%;
+    display: flex;
+}
+
+
 
 @media screen and (max-width: 768px) {
     /* Cambios para pantallas más pequeñas */
@@ -342,9 +764,13 @@ text-shadow: 2px 2px 5px rgb(15, 14, 14, 0.75);
     .nombrejuego h1{
         font-size: 50px;
         position:absolute;
-        margin-top: -50px;
+        margin-top: -90px;
         margin-left: 220px; 
 
+    }
+    .textoinicio{
+        display: flex;
+        flex-direction: column;
     }
     .juego {
         order: 1;
@@ -356,6 +782,43 @@ text-shadow: 2px 2px 5px rgb(15, 14, 14, 0.75);
     .IniciarSesion {
         order: 3;
     }
+    .somos img{
+        display: none;
+    }
+    .somos h1{
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .nombrejuego h1{
+        transform: translate(-170%, 50%);
+    }
+        
+}
+@media screen and (max-width: 768px) {
+      .personajes div{
+        flex-direction: column;
+      }
+      .personaje h3{
+        font-size: 20px;
+      }
+      .personaje p{
+        font-size: 15px;
+      }
+      .personaje img{
+        height: 400px;
+        width: auto;
+      }
+      .flecha img{
+        display: none;
+      }
+      
+      .personaje {
+        transform: scale(0.6); /* Hace los personajes más pequeños */
+        display: flex;
+        flex-direction: column;
+      }
+    
+    
 }
 @media screen and (max-width: 800px) {
     .Nombre{
@@ -367,3 +830,4 @@ text-shadow: 2px 2px 5px rgb(15, 14, 14, 0.75);
         display: none; /* Oculta elementos no esenciales en pantallas muy pequeñas */
     }
 }
+
