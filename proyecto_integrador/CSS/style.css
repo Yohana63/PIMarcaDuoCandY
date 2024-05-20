@@ -20,12 +20,6 @@ body{
 }
 /*-------------------------------------------------*/
 /*Iniciar Sesión y Registrarse*/
-/* body.iniciosesion {
-    background: url(../img/iniciosesion.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-} */
 body.iniciosesion{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
@@ -44,7 +38,7 @@ body.registrarse {
     background: #fff;
     margin-top: 100px;
 }
-/* h1{
+.formulario h1{
     padding-top: 20px;
     text-align: center;
     color: #1a2537;
@@ -56,7 +50,7 @@ h1#ttl{
     color: #1a2537;
     font-size: 40px;
 }
-/* h3{
+.formulario h3{
     margin: 0;
 } */
 /* h3#ttl3{
@@ -67,7 +61,7 @@ h1#ttl{
     margin: 0;
     flex: 1; /* El texto ocupa el espacio restante */
 }
- img{
+.registarse img{
     padding-top: 4px;
     width: 35px;
     height: 35px;
@@ -85,11 +79,6 @@ h1#ttl{
     height: 35px;
     text-align: center;
 }
-/*img{
-    width: 35px;
-    height: 35px;
-    text-align: center;
-}*/
 input[type="text"], input[type="password"]{
     text-align: center;
     font-size: 20px;
@@ -155,6 +144,14 @@ p{
     width: 100%; 
     z-index: 1000; 
 }
+.menuhamburguer {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 /* Estilos para el logo */
 .menu .logo img {
@@ -162,7 +159,13 @@ p{
 }
 
 /* Estilos para los enlaces de navegación */
-.menu .nav-links,
+.menu .nav-links {
+    list-style: none; 
+    padding-right: 20%;
+    margin: 0;
+    display: flex; 
+}
+
 .menu .auth-links {
     list-style: none; 
     padding: 0;
