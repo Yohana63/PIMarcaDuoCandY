@@ -18,9 +18,20 @@ body{
     width: 100%;
     padding: 15px;
 }
+.contacto .contenedor{
+    width: 100%;
+    padding: 15px;
+}
 /*-------------------------------------------------*/
 /*Iniciar Sesión y Registrarse*/
+.forma{
+    padding: 100px;
+}
 body.iniciosesion{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+body.contacto{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
 }
@@ -43,7 +54,7 @@ body.registrarse {
     text-align: center;
     color: #1a2537;
     font-size: 40px;
-} */
+} 
 h1#ttl{
     padding-top: 20px;
     text-align: center;
@@ -52,6 +63,7 @@ h1#ttl{
 }
 .formulario h3{
     margin: 0;
+    flex: 1;
 } */
 /* h3#ttl3{
     margin: 0;
@@ -61,12 +73,20 @@ h1#ttl{
     margin: 0;
     flex: 1; /* El texto ocupa el espacio restante */
 }
+.iniciosesion{
+    margin: 0;
+    flex: 1;
+}
+.contacto{
+    margin: 0;
+    flex: 1;
+}
 .registarse img{
     padding-top: 4px;
     width: 35px;
     height: 35px;
     text-align: center;
-} */
+} 
 /* img#imagenform{
     padding-top: 4px;
     width: 35px;
