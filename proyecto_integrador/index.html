@@ -5,33 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>"NOMBRE JUEGO” | Web Oficial | Open System Gaming</title>
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="shortcut icon" href="icon/favicon.jpg" type="image/x-icon"> 
+    <link rel="shortcut icon" href="icon/faviconarriba.jpg" type="image/x-icon"> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 <body id="index">
     <!-- Menú superior -->
+    <div class="menu-toggle">
+        <div class="hamburger"></div>
+      </div>
     <nav class="menu">
         <div class="logo">
-            <img src="icon/favicon.jpg" alt="Logo">
+            <img src="icon/faviconfenix.png" alt="Logo">
         </div>
-        <div class="menuhamburguer">
             <div class="icon">
-                <li><a href="#">
-                <!-- Icono de hamburguesa -->
-                <div class="hamburger"></div>
-                <div class="hamburger"></div>
-                <div class="hamburger"></div>   
-                </a>
-                    <ul>
-                        <li><a href="#quienes-somos">Quiénes Somos</a></li>
-                        <li><a href="#noticias">Noticias</a></li>
-                         <li><a href="#personajes">Personajes</a></li>
-                         <li><a href="#juegos">Juegos</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                    </ul>
-                    </li>
-
             </div>
         <ul class="nav-links">
             <li><a href="#quienes-somos">Quiénes Somos</a></li>
@@ -50,7 +37,7 @@
         <div class="container2"> </div>
     <!--div juego-->
     <div class="nombrejuego">
-        <h1>NOMBRE JUEGO</h1> 
+        <h1>La Profecía del Fénix</h1> 
         </div> 
         <!--div principal-->
     <div class="azul">
@@ -62,7 +49,7 @@
         </section>
 
         <!--div somos-->
-        <div class="titulosomos"> <h1>QUIENES SOMOS</h1></div>
+        <div class="titulosomos" id="quienes-somos"> <h1>QUIENES SOMOS</h1></div>
         <section class="somos">
           <div class="textosomos">
             <p>En Open System Gaming, brindamos experiencias de juego excepcionalesa través de soluciones innovadoras y tecnologías de vanguardia. 
@@ -76,47 +63,38 @@
         </section>
         <hr class="barra">
         <!--div noticias-->
-   <div class="titulonoticia">
+   <div class="titulonoticia" id="noticias">
         <h1>NOTICIAS</h1> 
     </div> 
         <section class="noticias">
             <!--Primera carta-->
-    <div class="card">
-        <!--DELANTE DE CARTA-->
-        <div class="face front">
-            <img src="img/zeldanoticia.png" alt="">
-            <h3>The Legend of Zelda</h3>
-        </div>
-        <!--ATRAS DE CARTA-->
-        <div class="face back">
-            <h3>The Legend of Zelda</h3>
-            <p>
-                Tears of the Kingdom' se lleva el premio 
-                al mejor juego del año en los Game Awards 2024, consolidando su 
-                éxito y popularidad desde su lanzamiento.</p>
-            <div class="link"><a href="#"></a>Más información</div>
-        </div>
-    </div>
-    <!--fin de primera carta-->
-     <!--Segunda carta-->
-     <div class="card">
-        <!--DELANTE DE CARTA-->
-        <div class="face front">
-            <img src="img/StarfallChronicles.jpg" alt="">
-            <h3>Starfall Chronicles</h3>
-        </div>
-        <!--ATRAS DE CARTA-->
-        <div class="face back">
-            <h3>Starfall Chronicles</h3>
-            <p>
-                El esperado juego de rol 'Starfall Chronicles' supera las 
-                expectativas de los jugadores con su lanzamiento, gracias a su 
-                inmersiva narrativa y gráficos impresionantes.
-            </p>
-            <div class="link"><a href="#"></a>Más información</div>
-        </div>
-    </div>
-     <!--fin de segunda carta-->
+            
+            <div class="container3">
+                <div class="card" style="--clr: #009688;">
+                <div class="imgBx">
+                    <img src="img/zeldanoticia.png" alt="">
+                </div>
+                <div class="content">
+                    <h2>"La Era de la Magia Renace"</h2>
+                    <p>El nuevo juego de rol "El Ascenso de Solarii" transporta a los 
+                    jugadores a un mundo donde la magia ha regresado tras siglos de olvido, 
+                    enfrentándose a criaturas míticas y desentrañando secretos ancestrales 
+                    para restaurar el equilibrio del mundo.</p>
+                </div>
+                </div>
+                <div class="card" style="--clr: #009688;">
+                <div class="imgBx">
+                    <img src="img/pionner.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h2>"CiberPunk: Ciudad Sin Futuro"</h2>
+                    <p>"CiberPunk: Ciudad Sin Futuro" sumerge a los jugadores en una 
+                    metrópolis distópica plagada de corrupción y tecnología avanzada, 
+                    donde deberán sobrevivir y prosperar en un entorno de intriga, hackeo 
+                    y combate callejero.</p>
+                </div>
+                </div>
+                </div>
      <!--mas noticias-->
      <div class="masnoticias">
         <p>Cyberpunk 2077: Phantom Liberty' recibe una actualización que mejora la 
@@ -138,13 +116,13 @@
         </section>
         <hr class="barra">
         <!--div personajes-->  
-        <div class="titulopersonajes"> 
+        <div class="titulopersonajes" id="personajes"> 
         <h1>PERSONAJES</h1>
         </div>  
         <section class="personajes">
             <div id="carrusel">
                 <div class="flecha" onclick="moverIzquierda()"><img src="img/flechaizquierda.png" alt=""></div>
-                <div id="personajes">
+                <div>
                   <!-- Añade aquí tus personajes con divs o cualquier otro elemento HTML -->
                   <div class="personaje"><img src="img/rayo.png.webp" alt=""><h3>Rayo Volante<p>Un hábil espadachín con una velocidad impresionante, conocido por sus ataques precisos y su capacidad para anticipar los movimientos enemigos.</p></h3></div>
                   <div class="personaje"><img src="img/mago.png" alt=""><h3>Eldorin el Sabio<p>Un anciano mago con una larga barba blanca y un sombrero. Es conocido por su sabiduría  y su profundo conocimiento de los secretos arcanos. Siempre dispuesto a ayudar a aquellos que buscan la verdad.</p></h3></div>
@@ -208,28 +186,50 @@
         </section>
         
         <!--div juegos-->
-        <section class="juegos">
+        <section class="juegos" id="juegos">
             <hr class="barra2">
             <h1>TAMBIÉN TE PUEDE INTERESAR...</h1>
-            <div class="contenedor" id="uno">
-                <img src="img/valoran.jpg" alt="" class="icon">
-                <p class="texto">VELOREN</p>
-            </div>
-            <div class="contenedor" id="dos" >
-                <img src="img/warzone.jpg" alt="" class="icon">
-                <p class="texto">WARZONE 2100</p>
-            </div>
-            <div class="contenedor" id="tres">
-                <img src="img/mindustry.jpg" alt="" class="icon">
-                <p class="texto">MINDUSTRY</p>
-            </div>
-            <div class="contenedor" id="cuatro">
-                <img src="img/pionner.jpg" alt="" class="icon">
-                <p class="texto">PIONEER</p>
-            </div>
+            <div id="card-area">
+                <div class="wrapper">
+                <div class="box-area">
+                    <!--juego 1-->
+                <div class="box">
+                <img src="img/Shadowlands.jpg" alt="">
+                <div class="overlay">
+                <h3>Shadowlands: Echoes of Eternity</h3>
+                <a href="#">Book Now</a>
+                </div>
+                </div>
+                <!--juego 2-->
+                <div class="box">
+                    <img src="img/Aetherium.jpg" alt="">
+                    <div class="overlay">
+                    <h3>Aetherium: Chronicles of the Skylands</h3>
+                    <a href="#">Book Now</a>
+                </div>
+                    </div>
+                    <!--juego 3-->
+                <div class="box">
+                    <img src="img/Wyrmwood.jpg" alt="">
+                    <div class="overlay">
+                    <h3>Wyrmwood: Legends of the Forbidden Forest</h3>
+                    <a href="#">Book Now</a>
+                    </div>
+                    </div>
+                    <!--juego 4-->
+                <div class="box">
+                    <img src="img/Draconis.jpg" alt="">
+                    <div class="overlay">
+                    <h3>Draconis: Age of Titans</h3>
+                    <a href="#">Book Now</a>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                </div>
         </section>
         <!--div final página-->
-        <div class="final">
+        <footer class="final" id="contacto">
 
     
         <h3>QUIENES SOMOS</h3>
@@ -240,7 +240,7 @@
 
         <div class="redes"><img src="icon/youtube.png" alt=""><img src="icon/tiktok.png" alt=""><img src="icon/instagram.png" alt=""><img src="icon/facebook.png" alt=""><img src="icon/twitter.png" alt=""></div>
 
-        </div>
+        </footer>
     </div>
 
     <!-- JavaScript para personajes -->

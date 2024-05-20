@@ -4,6 +4,11 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
+    background-image: url(../img/fondofenix.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
 }
 .contenedor{
     width: 100%;
@@ -36,7 +41,7 @@ h1{
 h3{
     margin: 0;
 }
-/*img{
+*img{
     width: 35px;
     height: 35px;
     text-align: center;
@@ -91,7 +96,7 @@ p{
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: black; 
+    background-color: #1D1D1D; 
     position: fixed; 
     top: 0; 
     width: 100%; 
@@ -100,7 +105,7 @@ p{
 
 /* Estilos para el logo */
 .menu .logo img {
-    height: 40px; /* Altura del logo */
+    height: 80px; /* Altura del logo */
 }
 
 /* Estilos para los enlaces de navegación */
@@ -146,68 +151,6 @@ p{
     justify-content: center;
     align-items: center;
 }
-.menuhamburguer {
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-.hamburger {
-    width: 25px;
-    height: 3px;
-    background-color: rgb(255, 255, 255);
-    margin: 5px 0;
-}
-ul{
-    list-style: none;
-}
-/*Daremos estilo a nuestro menú principal, contenido en la clase nav*/
-.icon li a{
-    /*Los elementos a están en el li directamente en le clase nav, heredarán las
-    propiedades que indicamos a continuación*/
-    background-color:black;
-    color: azure;
-    
-    /*Le asignamos un padding de top y bottom de 10 px, y laterales de 15px.
-    Esto es según vuestras características, no hace falta coger el mismo valor.*/
-    padding: 10px 15px;
-
-    /*Por defecto, los elementos están en línea, y si los dejamos como tal, se solapan.
-Para evitar el solapamiento, convertimos los elementos a bloque (block), y conseguimos el resultado de un conjunto de cajas alineadas.*/
-display:block;
-}
-
-.icon li a:hover{
-    background-color: rgb(28, 28, 28);
-}
-.icon >li{
-    /*Indicamos que los elementos directos a li en nav, tengan las sguientes caracteristicas*/
-    float:left;
-}
-.icon li ul{
-    /* Ocultamos los submenus, y luego los vamos a mostrar*/
-    display: none;
-    /*Establecer posición absoluta a los submenus, con un tamaño minimo de 
-    anchura para que todos sean iguales*/
-    position: absolute;
-    min-width: 150px;
-
-}
-.icon li:hover >ul{
-    /*Mostramos los submenus cuando solo pasamos el raton por encima de la opcion marcada*/
-display: block;
-}
-.icon li ul li{
-    position: relative;
-}
-.icon li ul li ul{
-    right: -200px;
-    top: 1px;
-}
-/* Estilos para la barra de navegación */
 
 /* Estilos para los elementos del menú */
 .menu .nav-links {
@@ -219,8 +162,21 @@ display: block;
     margin: 0 10px;
 }
 
+
 /* Media query para pantallas pequeñas */
-@media (max-width: 768px) {
+@media (max-width: 576px) {
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #1D1D1D; 
+        position: fixed; 
+        top: 0; 
+        width: 100%; 
+        height: 20%;
+        z-index: 1000; 
+    }
     .menu .auth-links {
         flex-direction: column;
         align-items: center; /* Centrar los elementos */
@@ -228,7 +184,9 @@ display: block;
        
     }
     .menu .nav-links {
-        display: none; /* Ocultar la lista del menú en pantallas pequeñas */
+       flex-direction: column;
+        align-items: center; /* Centrar los elementos */
+        height: 100px;
     }
 
     .icon {
@@ -247,27 +205,14 @@ display: block;
     .menu .auth-links a {
         padding: 5px;
     }
+    
 }
 /*---------------------------------------------------*/
 /*inicio*/
-.container2{
-    width: 100%;
-    height: 2000px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    background: url(../img/inicio.jpg);
-    background-repeat: repeat-x;
-    position: fixed;
-    top: 0; 
-    left: 0; 
-    z-index: -1; 
-}
 .azul{
     width: 100%;
     height: 100%;
-    background-color: rgba(104, 131, 251, 0.75);
+    background-color:#8d918dc6;
     position:relative;
     margin-top: 500px;
     z-index: 0;
@@ -276,9 +221,9 @@ display: block;
 .nombrejuego h1{
     font-family: fantasy;
     color: #D0A933;
-    font-size: 100px;
+    font-size: 80px;
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -40%);
     text-align: center;
@@ -290,14 +235,14 @@ display: block;
 display: flex;
 }
 .textoinicio h3{
-    color: #DDBD3C;
+    color: #F4D35E;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-shadow: 2px 2px 5px #0f0e0e;    
     display: flex;
     padding: 5%;
 }
 .textoinicio p{
-    color: black;
+    color: white;
     align-items: center;
     font-family: 22px;
 }
@@ -305,7 +250,7 @@ display: flex;
 .titulosomos h1{
     font-size: 40px;
     display: flex;
-    color: #ddbd3c;
+    color: #F4D35E;
     flex-direction: column-reverse;
     align-items: center;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -349,98 +294,95 @@ display: flex;
 /*div noticias*/
 .noticias{
     display: flex;
-    padding-left: 5%;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
 }
 .titulonoticia h1{
     font-size: 40px;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    color: #ddbd3c;
+    color: #F4D35E;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-shadow: 2px 2px 5px #0f0e0e;
 
 }
-.card{
+.container3{
     position: relative;
-    width: 300px;
-    height: 350px;
-    /*aplicar margenes con cartas*/
-    margin-top: 30px;
-    
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
-.card .face{
-    width: 80%;
-    height:80%;
-    /*determina si la cara posterior de un elemento es visible de frente al usuario.
-    La cara posterior de un elemento siempre es un fondo transparente, permitiendo,
-    cuando es visible, que se muestre una imagen de espejo de la cara frontal. 
-    Tiene la propiedad visible: significa que la cara posterior es visible,
-    permitiendo que la cara frontal se muestre invertida. hidden: significa que 
-    la cara posterior no es visible, ocultando la cara frontal */
-    backface-visibility: hidden;
-    border-radius: 15px;
+.container3 .card{
+display: flex;
+justify-content: center;
+align-items: flex-start;
+position: relative;
+width: 350px;
+height: 300px;
+background-color: rgba(247, 128, 0, 0.75);
+border-radius: 20px;
+box-shadow: 0 35px 80px rgba(0,0,0,0.25);
+transition: 0.5s;
+}
+.container3 .card:hover{
+    height: 400px;
+}
+
+.container3 .card .imgBx{
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background:#333;
+    border-radius: 12px;
     overflow: hidden;
     transition: 0.5s;
+}
+.container3 .card:hover .imgBx{
+top: -100px;
+scale: 0.75;
+box-shadow: 0 15px 45px rgba(0,0,0,0.2);
+}
+.container3 .card .imgBx img{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.container3 .card .content h2{
+    font-size: 110%;
+    text-shadow: 2px 2px 5px #0f0e0e;
+}
+.container3 .card .content{
+position: absolute;
+top: 252px;
+width: 100%;
+height: 35px;
+padding: 0 20px;
+overflow: hidden;
+text-align: center;
+transition: 0.5s;
+color: white;
+}
+
+.container3 .card:hover .content {
+    top: 130px;
+    height: 250px;
     }
-    .card .front{
-        transform: perspective(600px) rotateY(0deg);
-        box-shadow: 0px 5px 10px #000;
-    }
-    .card .front img{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .card .front h3{
-        position: absolute;
-        bottom: 0px;
-        width: 100%;
-        height: 45px;
-        line-height: 45px;
-        color: white;
-        background: rgb(0, 0, 0, 0.4);
-        text-align: center;
-    }
-    .card .back{
-        transform: perspective(600px) rotateY(180deg);
-        background: #111B2E;
-        padding: 15px;
-        color: #f3f3f3;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        text-align: center;
-        box-shadow: 0px 5px 10px #000; 
-    }
-    .card .back .link{
-        border-top: 1px solid #f3f3f3;
-        height: 50px;
-        line-height: 50px;
-    }
-    .card .back .link a{
-        color: #f3f3f3;
-    }
-    .card .back h3{
-        font-size: 30px;
-        margin-top: 20px;
-        letter-spacing: 2px;
-    }
-    .card .back p{
-        letter-spacing: 1px;
-    }
-    .card:hover .front{
-        transform: perspective(600px)rotateY(180deg);
-    }
-    .card:hover .back{
-        transform: perspective(600px)rotateY(360deg);
-    }
+
 /*mas noticias*/
 .masnoticias{
     height: 50%;
-    width: 50%;
-    background-color: #111B2E;
+    width: 70%;
+    background-color: rgba(247, 128, 0, 0.75);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -449,6 +391,7 @@ display: flex;
     box-shadow: 0px 5px 10px #000; 
     color: white;
     margin: 20px;
+    margin-right: 10%;
 
 }
 .masnoticias a{
@@ -461,9 +404,9 @@ display: flex;
 .titulopersonajes h1{
     font-size: 40px;
     display: flex;
+    color: #F4D35E;
     flex-direction: column-reverse;
     align-items: center;
-    color: #ddbd3c;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-shadow: 2px 2px 5px #0f0e0e;
 }
@@ -473,14 +416,14 @@ display: flex;
   .personajes div{
     display: flex;
     justify-content: center;
-    margin: 4%;
+    margin: 2% 4% 4% 4%;
   }
   .personaje h3{
     font-size: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #ddbd3c;
+    color: #F4D35E;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-shadow: 2px 2px 5px #0f0e0e;
   }
@@ -516,20 +459,20 @@ display: flex;
   }
 /*div expansiones*/
 .tituloexpansiones{
-    background-color:#111b2eb5;
+    background-color:#f780008c;
     font-size: 40px;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-shadow: 2px 2px 5px #0f0e0e;
-    border-top: 2px solid black; 
+    border-top: 2px solid #1D1D1D; 
 }
 .tituloexpansiones h1{
-    color: #ddbd3c;
+    color: #F4D35E;
 }
 .expansiones{
-    background-color:#111b2eb5;
+    background-color:#f780008c;
     justify-content: center;
 }
 .fotos{
@@ -610,10 +553,10 @@ padding: 0px;
 }
 /*div juegos*/
 .juegos{
-    background-color:#111b2eb5;
+    background-color:#f780008c;
     justify-content: center;
-    padding-top: 5%;
-    padding-bottom: 30%;
+    padding-top: 2%;
+    padding-bottom: 3%;
 
 }
 .juegos h1{
@@ -625,73 +568,84 @@ padding: 0px;
     text-shadow: 2px 2px 5px #0f0e0e;
 }
 
-div.contenedor{
-    width: 20%;
-    height: 20%;
-    float: left;
-    transition: height .4s;
+    .wrapper{
+    padding: 10px 10%;
     }
-    div#uno{
-        background-color: rgba(104, 131, 251, 0.75);
-        margin-right: 5%;
-        margin-left: 2%;
+    #card-area{
+    padding: 50px 0;
+    }
+    .box-area{
+    display: flex;
+    margin-top: 50px;
+    }
+    .box{
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    margin-left: 2%;
+    }
+    .box img{
+        width: 100%;
         border-radius: 10px;
-    }
-    div#dos{
-        background-color: rgba(104, 131, 251, 0.75);
-        margin-right: 5%;
-        border-radius: 10px;
-    }
-    div#tres{
-        background-color: rgba(104, 131, 251, 0.75);
-        margin-right: 5%;
-        border-radius: 10px;
-    }
-    div#cuatro{
-        background-color: rgba(104, 131, 251, 0.75);
-        margin-right: 2%;
-        border-radius: 10px;
-    }
-    
-    img.icon{
         display: block;
-        margin: 50px auto;
-        background-color: rgba(255, 255, 255, .15);
-        width: 80%;
-        height: auto;
-        border-radius: 10%;
-        box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.399);
-        transition: box-shadow .5s;
+        transition: transform 0.5s;
     }
     
-    p.texto{
-        font-size: 1.2em;
-        color: white;
+    .overlay{
+        height: 0;
+        width: 100%;
+        background: linear-gradient(transparent,  #F4D35E 58%);
+        border-radius: 10px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 40px;
         text-align: center;
-        padding-top: 10px;
-        opacity: .6;
-        transition: padding-top .4s;
-    }
-    div.contenedor:hover{
-        height: 40%;
-    }
-    div.contenedor:hover p.texto{
-        padding-top: 30px;
-        opacity: 1;
-        font-size: 1.3em;
-    }
-    div.contenedor:hover img.icon{
-        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, .6);
-    }
+        font-size: 14px;
+        transition: height 0.5s;
+        }
+        .overlay h3{
+            margin-bottom: 5px;
+            margin-top: 80%;
+            color: white;
+            text-shadow: 2px 2px 5px #0f0e0e;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+        .overlay a{
+        margin-top: 10px;
+        color: #262626;
+        text-decoration: none;
+        font-size: 14px;
+        background:#fff;
+        border-radius: 50px;
+        text-align: center;
+        padding: 5px 15px;
+            }
+        .boxLhover img{
+            transform: scale(1.2);
+            }
+            .box:hover .overlay{
+            height: 100%;
+            }
+        
 /*div final*/
 .final{
-    background-color:black ;
+    background-color:#1D1D1D ;
     padding: 5% 5% 4% 5%;
     color: white;
     display: block;
 }
 .final a{
-    color:#DDBD3C;
+    color:#F4D35E;
     text-decoration: none;
 }
 .redes{
@@ -702,10 +656,45 @@ div.contenedor{
     width: 40%;
     display: flex;
 }
+@media screen and (max-width: 992px) {
+
+/*div titulo*/
+.nombrejuego h1{
+    font-family: fantasy;
+    color: #D0A933;
+    font-size: 50px;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    text-align: center;
+    text-shadow: 2px 2px 5px #0f0e0e;
+    z-index: 1;
+}
+
+/*div noticias*/
+.container3{
+    flex-direction: column;
+}
+
+/*div personajes*/
+#personajes {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .personaje img{
+    height: 550px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+  }
+}
 
 
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
     /* Cambios para pantallas más pequeñas */
     .Nombre, .juego {
         padding-left: 0;
@@ -726,7 +715,7 @@ div.contenedor{
         font-size: 50px;
         position:absolute;
         margin-top: -90px;
-        margin-left: 220px; 
+        margin-left: 50%; 
 
     }
     .textoinicio{
@@ -755,7 +744,17 @@ div.contenedor{
     }
         
 }
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 576px) {
+    .nombrejuego h1{
+        font-size: 30px;
+        position:absolute;
+        margin-top: -110px;
+        margin-left: 30%; 
+    }
+    .personajes{
+        width: 100%;
+    }
       .personajes div{
         flex-direction: column;
       }
@@ -774,13 +773,40 @@ div.contenedor{
       }
       
       .personaje {
-        transform: scale(0.6); /* Hace los personajes más pequeños */
-        display: flex;
-        flex-direction: column;
+        transform: scale(1); 
+        transition: none; 
+      }
+      .personaje.central {
+        transform: scale(1);
       }
     
-    
+      /*div expansiones*/
+.expansiones{
+    background-color:#f780008c;
+    justify-content: center;
 }
+.fotos{
+    width: 100%;
+    margin: 0 auto;
+}
+.container{
+    width: 100%;
+    padding-left: 8%;
+    display: flex;
+    flex-wrap: wrap;
+}
+/*Estructura de cada componente de la galeria (imagen+descripcion)*/
+.container div{
+width: auto;
+height: 40%;
+display: flex;
+flex-direction: column;
+float: left;
+margin: 1%;
+padding: 0px;
+}
+}
+    
 @media screen and (max-width: 800px) {
     .Nombre{
         display: none; /* Oculta elementos no esenciales en pantallas muy pequeñas */
