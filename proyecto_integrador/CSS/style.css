@@ -10,7 +10,11 @@ body{
     background-attachment: fixed;
     background-size: 100% 100%;
 }
-.contenedor{
+.registarse .contenedor{
+    width: 100%;
+    padding: 15px;
+}
+.iniciosesion .contenedor{
     width: 100%;
     padding: 15px;
 }
@@ -22,11 +26,15 @@ body{
     background-attachment: fixed;
     background-size: 100% 100%;
 } */
-body#loginYsignin{
+body.iniciosesion{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
 }
-body#registrarse {
+body.registrarse{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+body.registrarse {
     background: url(../img/registrarse.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -51,24 +59,48 @@ h1#ttl{
 /* h3{
     margin: 0;
 } */
-h3#ttl3{
+/* h3#ttl3{
+    margin: 0;
+    flex: 1; /* El texto ocupa el espacio restante 
+} */
+.registarse{
     margin: 0;
     flex: 1; /* El texto ocupa el espacio restante */
 }
+<<<<<<< HEAD
 
 * img{
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+*img{
+=======
+<<<<<<< HEAD
+>>>>>>> b37ef3db199fd4d1166bbb4ecbfc0f6a9c5d6d7c
+/* img{
+>>>>>>> 464c3f0e9f359b9e701e1be0b8c21d562cc09f79
     padding-top: 4px;
     width: 35px;
     height: 35px;
     text-align: center;
 } */
-img#imagenform{
+/* img#imagenform{
+    padding-top: 4px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+} */
+.registrarse img{
     padding-top: 4px;
     width: 35px;
     height: 35px;
     text-align: center;
 }
 /* input[type="text"], input[type="password"]{
+<<<<<<< HEAD
+=======
 =======
 /*img{
 >>>>>>> 4bd656c4d3e261db01328bc449498fd3c8508b74
@@ -77,6 +109,11 @@ img#imagenform{
     text-align: center;
 }*/
 input[type="text"], input[type="password"]{
+<<<<<<< HEAD
+=======
+>>>>>>> 936efa9c41a34f5859eaeb757e43a2b8d2697fdd
+>>>>>>> b37ef3db199fd4d1166bbb4ecbfc0f6a9c5d6d7c
+>>>>>>> 464c3f0e9f359b9e701e1be0b8c21d562cc09f79
     text-align: center;
     font-size: 20px;
     width: 80%;
@@ -87,7 +124,7 @@ input[type="text"], input[type="password"]{
     margin-bottom: 15px;
     border: 1px solid #aaa;
 }
-.icon {
+.registrarse .icon {
     width: 35px;
     height: 35px;
     margin-right: 10px; /* Espacio entre el icono y el texto */
