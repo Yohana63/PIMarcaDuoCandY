@@ -25,7 +25,17 @@ body{
 /*-------------------------------------------------*/
 /*Iniciar Sesión y Registrarse*/
 .forma{
-    padding: 100px;
+    display: flex;
+    background-color: rgba(29, 29, 29);
+    height: 60vh;
+    width: 40%;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30%;
+    margin-top: 12%;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px #ff000080;
 }
 body.iniciosesion{
     font-family: Arial, Helvetica, sans-serif;
@@ -38,6 +48,7 @@ body.contacto{
 body.registrarse{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
+    display: flex;
 }
 body.registrarse {
     background: url(../img/registrarse.jpg);
@@ -45,30 +56,22 @@ body.registrarse {
     background-attachment: fixed;
     background-size: 100% 100%;
 }
-.formulario{
-    background: #fff;
-    margin-top: 100px;
-}
 .formulario h1{
     padding-top: 20px;
     text-align: center;
     color: #1a2537;
     font-size: 40px;
+    color:#F4D35E;
+    text-shadow: 2px 2px 5px #9797979a;
 } 
-h1#ttl{
-    padding-top: 20px;
-    text-align: center;
-    color: #1a2537;
-    font-size: 40px;
-}
 .formulario h3{
     margin: 0;
     flex: 1;
-} */
-/* h3#ttl3{
-    margin: 0;
-    flex: 1; /* El texto ocupa el espacio restante 
-} */
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    margin-right: 3%;
+}
 .registarse{
     margin: 0;
     flex: 1; /* El texto ocupa el espacio restante */
@@ -82,37 +85,26 @@ h1#ttl{
     flex: 1;
 }
 .registarse img{
-    padding-top: 4px;
-    width: 35px;
-    height: 35px;
+    padding-top: 15px;
+    width: 15px;
+    height: 15px;
     text-align: center;
 } 
-/* img#imagenform{
-    padding-top: 4px;
-    width: 35px;
-    height: 35px;
-    text-align: center;
-} */
-.registrarse img{
-    padding-top: 4px;
-    width: 35px;
-    height: 35px;
-    text-align: center;
-}
 input[type="text"], input[type="password"]{
     text-align: center;
     font-size: 20px;
-    width: 80%;
+    width: 50%;
     padding: 10px;
     border: none;
+    background-color: rgba(29, 29, 29);
 } */
 .input-contenedor{
     margin-bottom: 15px;
     border: 1px solid #aaa;
 }
-.registrarse .icon {
+.input-contenedor .icon {
     width: 35px;
-    height: 35px;
+    height: 25px;
     margin-right: 10px; /* Espacio entre el icono y el texto */
 }
 .imput-contenedor {
@@ -121,19 +113,27 @@ input[type="text"], input[type="password"]{
 }
 .button{
     border: none;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    width: 50%;
     font-size: 20px;
-    color: white;
-    background-color: #1a2537;
-    padding: 15px 20px;
+    color:  #1D1D1D;
+    background-color: #b7300e;
+    padding: 10px ;
     border-radius: 5px;
     cursor: pointer;
+    margin-left: 25%;
 }
 .button:hover{
-    background-color: cadetblue;
+    background-color:  #f3841d;
+}
+p a{
+    color:#F4D35E;
+    text-decoration: none;
 }
 p{
     text-align: center;
+    color: white;
 }
 .link{
     text-decoration: none;
@@ -143,7 +143,7 @@ p{
 .link:hover{
     color: cadetblue;
 }
-@media(min-width: 768px){
+@media(max-width: 768px){
     .formulario{
         margin-top: 150px;
         width: 500px;
@@ -265,7 +265,7 @@ p{
         height: 100px;
     }
 
-    .icon {
+    .menu .icon {
         display: block;
         padding-left: 10px;
     }
@@ -488,6 +488,7 @@ color: white;
 }
 #personajes {
     display: flex;
+    justify-content: center;
   }
   .personajes div{
     display: flex;
@@ -496,6 +497,7 @@ color: white;
   }
   .personaje h3{
     font-size: 20px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -564,7 +566,9 @@ color: white;
 }
 .container{
     width: 100%;
-    padding-left: 8%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 /*Estructura de cada componente de la galeria (imagen+descripcion)*/
 .container div{
@@ -755,19 +759,35 @@ padding: 0px;
 
 /*div personajes*/
 #personajes {
-    display: flex;
     flex-direction: column;
   }
-
   .personaje img{
     height: 550px;
     width: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
   }
+  .personajes div {
+    display: flex;
+    justify-content: center;
+    margin: 2% 4% 4% 4%;
+    height: 80%;
+    width: 80%;
+    flex-wrap: wrap;
+  }
+
+  .flecha img{
+    display: none;
+  }
+
+  .personaje h3{
+    font-size: 15px;
+  }
+  .personaje p{
+    font-size: 12px;
+    width: 100%;
+  }
+
 }
+
 
 
 @media screen and (max-width: 576px) {
