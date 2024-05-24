@@ -1,5 +1,7 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
@@ -24,18 +26,18 @@ body{
 }
 /*-------------------------------------------------*/
 /*Iniciar Sesión y Registrarse*/
-.forma{
+.forma {
     display: flex;
-    background-color: rgba(29, 29, 29);
-    height: 60vh;
-    width: 40%;
+    background-color: rgba(29, 29, 29, 0.95);
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    margin-left: 30%;
-    margin-top: 12%;
+    margin: 3% auto;
+    padding: 2%;
     border-radius: 20px;
     box-shadow: 0 35px 80px #ff000080;
+    width: 80%;
+    max-width: 600px;
 }
 body.iniciosesion{
     font-family: Arial, Helvetica, sans-serif;
@@ -56,25 +58,19 @@ body.registrarse {
     background-attachment: fixed;
     background-size: 100% 100%;
 }
-.formulario h1{
-    padding-top: 20px;
+.formulario h1 {
     text-align: center;
-    color: #1a2537;
+    color: #F4D35E;
     font-size: 40px;
-    color:#F4D35E;
     text-shadow: 2px 2px 5px #9797979a;
-} 
-.formulario h3{
-    margin: 0;
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
+}
+.formulario h3 {
+    margin: 1%;
     color: white;
-    margin-right: 3%;
 }
 .registarse{
     margin: 0;
-    flex: 1; /* El texto ocupa el espacio restante */
+    flex: 1; 
 }
 .iniciosesion{
     margin: 0;
@@ -91,29 +87,29 @@ body.registrarse {
     text-align: center;
 } 
 input[type="text"], input[type="password"]{
-    text-align: center;
+    text-align: left;
     font-size: 20px;
-    width: 50%;
+    width: 100%;
     padding: 10px;
     border: none;
     background-color: rgba(29, 29, 29);
-} */
-.input-contenedor{
+    color: #aaa;
+    border-radius: 5px;
+    margin-left: 3%;
+}
+
+.input-contenedor .icono {
+    width: 5%;
+    height: auto;
+    margin-right: 3%; 
+}
+.input-contenedor { 
     margin-bottom: 15px;
-    border: 1px solid #aaa;
-}
-.input-contenedor .icon {
-    width: 35px;
-    height: 25px;
-    margin-right: 10px; /* Espacio entre el icono y el texto */
-}
-.imput-contenedor {
     display: flex;
-    align-items: center; /* Alinea verticalmente los elementos */
+    align-items: center; 
 }
 .button{
     border: none;
-    display: flex;
     justify-content: center;
     width: 50%;
     font-size: 20px;
@@ -127,21 +123,19 @@ input[type="text"], input[type="password"]{
 .button:hover{
     background-color:  #f3841d;
 }
-p a{
-    color:#F4D35E;
-    text-decoration: none;
-}
 p{
     text-align: center;
     color: white;
 }
-.link{
+p a{
+    color:#F4D35E;
     text-decoration: none;
-    color: #1a2537;
-    font-weight: 600px;
 }
-.link:hover{
-    color: cadetblue;
+p a:hover {
+    text-decoration: underline;
+}
+textarea{
+    margin-bottom: 10%;
 }
 @media(max-width: 768px){
     .formulario{
@@ -153,136 +147,111 @@ p{
 }
 /*---------------------------------------------------*/
 /* Estilos para el menú */
-.menu {
+header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #1D1D1D; 
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
-    z-index: 1000; 
-}
-.menuhamburguer {
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-/* Estilos para el logo */
-.menu .logo img {
-    height: 80px; /* Altura del logo */
-}
-
-/* Estilos para los enlaces de navegación */
-.menu .nav-links {
-    list-style: none; 
-    padding-right: 20%;
-    margin: 0;
-    display: flex; 
-}
-
-.menu .auth-links {
-    list-style: none; 
-    padding: 0;
-    margin: 0;
-    display: flex; 
-}
-
-/* Estilos para los enlaces de navegación */
-.menu .nav-links a {
-    margin: 0 10px; /* Espacio entre elementos */
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-}
-.menu .auth-links a {
-    margin: 0 10px; /* Espacio entre elementos */
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    border-radius: 10px;
-    padding: 10px;
-}
-.menu .auth-links a{
-    background-color: #fae017;
-}
-.menu .nav-links a:hover {
-    background-color: #2d2d2d;
-}
-.menu .auth-links a:hover{
-    background-color: #ffec5c;
-}
-.icon {
-    display: none; /* Ocultar el icono en pantallas grandes */
-    cursor: pointer;
-}
-
-/* Estilos para el icono de hamburguesa en pantallas pequeñas */
-.menu .nav-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Estilos para los elementos del menú */
-.menu .nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.menu .nav-links li {
-    margin: 0 10px;
-}
-
-
-/* Media query para pantallas pequeñas */
-@media (max-width: 576px) {
-    .menu {
+    padding: 1rem;
+    background-color: #1c1c1c;
+    justify-content: space-around;
+    }
+    .nav{
         display: flex;
-        justify-content: space-between;
+        flex-direction: row;
         align-items: center;
-        padding: 10px 20px;
-        background-color: #1D1D1D; 
-        position: fixed; 
-        top: 0; 
-        width: 100%; 
-        height: 20%;
-        z-index: 1000; 
+        position: relative;
+        margin-left: 20%;
     }
-    .menu .auth-links {
-        flex-direction: column;
-        align-items: center; /* Centrar los elementos */
-        height: 100px;
-       
+    .logo {
+    max-width: 5rem;
     }
-    .menu .nav-links {
-       flex-direction: column;
-        align-items: center; /* Centrar los elementos */
-        height: 100px;
+    .nav-lista {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
     }
-
-    .menu .icon {
-        display: block;
-        padding-left: 10px;
+    .nav-lista li a {
+    text-decoration: none;
+    color: #f51b1b;
     }
-    /* Ajustar el tamaño de las fuentes y espacios */
-    .menu .nav-links li,
-    .menu .auth-links a {
-        margin: 5px 0; 
-        font-size: 14px; 
+    .nav-lista li a:hover {
+        color: #ff5050;
+        }
+    .abrir-menu, .cerrar-menu{
+        display: none;
     }
-    .menu .nav-links li {
-        padding: 10px;
+    .autolinks a {
+        margin: 0 10px; /* Espacio entre elementos */
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border-radius: 10px;
+        padding: 10px;   
     }
-    .menu .auth-links a {
-        padding: 5px;
+   .autolinks a{
+        background-color: #fae017;
+    }
+   .autolinks a:hover{
+        background-color: #ffec5c;
     }
     
-}
+    @media screen and (max-width: 576px) {
+        .abrir-menu, .cerrar-menu {
+            display: block;  
+            border: 0;
+            background-color: transparent;
+            }
+        .entrar{
+            max-width: 70%;
+            padding-left: 20%;
+        }
+        .salir{
+            height: 60%;
+            width: 60%;
+            padding-top: 50%;
+        }
+        .nav {
+            opacity: 0;
+            visibility: hidden; 
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            gap: 1rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #1c1c1c;
+            padding: 3rem;
+            box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+            }
+        .nav.visible{
+            opacity: 1;
+            visibility: visible;
+        }
+        .nav-lista{
+        flex-direction: column;
+        align-items: end;
+        }  
+        .nav-lista li a {
+            text-decoration: none;
+            color: #ff5050;
+            }
+    }
+
+    @media screen and (max-width: 992px) {
+        .autolinks a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 4%;
+        }
+        .nav-lista {
+            list-style-type: none;
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+        }
+    }
+
+    
 /*---------------------------------------------------*/
 /*inicio*/
 .azul{
@@ -309,13 +278,14 @@ p{
 /*div inicio*/
 .textoinicio{
 display: flex;
+width: 100%;
 }
 .textoinicio h3{
     color: #F4D35E;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-shadow: 2px 2px 5px #0f0e0e;    
     display: flex;
-    padding: 5%;
+    padding: 5% 5% 7% 2%;
 }
 .textoinicio p{
     color: white;
@@ -339,9 +309,9 @@ display: flex;
 }
 
 .somos img{
-    width: 400px;
+    width: 300px;
     height: auto;
-    margin: 2%;  
+    margin: 3%;  
 }
 .textosomos{
     padding-right: 5%;
@@ -356,16 +326,25 @@ display: flex;
     color: beige;
     text-shadow: 2px 2px 5px rgb(15, 14, 14, 0.75);
 }
+@media screen and (max-width: 780px) {
+    .textoinicio{
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 .barra {
     border: none; 
     border-top: 3px solid  #111B2E;
-    width: 80%;
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 2%;
   }
   .barra2 {
     border: none; 
     border-top: 3px solid  #ffffffea;
     width: 90%;
+    margin-left: 3%;
   }
 /*div noticias*/
 .noticias{
@@ -434,7 +413,8 @@ height: 100%;
 object-fit: cover;
 }
 .container3 .card .content h2{
-    font-size: 110%;
+    font-size: 100%;
+    margin-bottom: 3%;
     text-shadow: 2px 2px 5px #0f0e0e;
 }
 .container3 .card .content{
@@ -475,6 +455,18 @@ color: white;
     text-decoration: none;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
+@media screen and (max-width: 720px) {
+.masnoticias p{
+    display: none;
+}
+.noticias{
+    display: flex;
+    flex-direction: column;
+
+}
+}
+
+
 /*div personajes*/
 
 .titulopersonajes h1{
@@ -535,6 +527,7 @@ color: white;
   .personaje.central {
     transform: scale(1); /* Hace el personaje central más grande */
   }
+
 /*div expansiones*/
 .tituloexpansiones{
     background-color:#f780008c;
@@ -573,15 +566,15 @@ color: white;
 /*Estructura de cada componente de la galeria (imagen+descripcion)*/
 .container div{
 width: auto;
-height: 40%;
+height: 50%;
 display: inline;
 float: left;
 margin: 1%;
 padding: 0px;
 }
 .container div img{
-    width: 150px;
-    height:200px;
+    width: 200px;
+    height:250px;
     box-shadow: 0 0 10px #00000089;
     border: 2px solid #fff;
 }
@@ -603,7 +596,7 @@ padding: 0px;
 }
 .container:hover div:hover{
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1.2);
 }
 .informacion{
     font-size: 30px;
@@ -627,9 +620,6 @@ padding: 0px;
 .oculto {
     display: none;
     color: white;
-}
-.visible {
-    display: block;
 }
 /*div juegos*/
 .juegos{
@@ -736,6 +726,17 @@ padding: 0px;
     width: 40%;
     display: flex;
 }
+@media screen and (max-width: 1310) {
+
+      .personajes div {
+            display: flex;
+            margin: 2% 4% 4% 4%;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+        
+      }
+}
 @media screen and (max-width: 992px) {
 
 /*div titulo*/
@@ -744,7 +745,7 @@ padding: 0px;
     color: #D0A933;
     font-size: 50px;
     position: absolute;
-    top: 38%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -40%);
     text-align: center;
@@ -768,10 +769,8 @@ padding: 0px;
   .personajes div {
     display: flex;
     justify-content: center;
-    margin: 2% 4% 4% 4%;
-    height: 80%;
-    width: 80%;
     flex-wrap: wrap;
+    margin: 2% 4% 4% 4%;
   }
 
   .flecha img{
@@ -796,23 +795,10 @@ padding: 0px;
         padding-left: 0;
         padding-top: 5px;
     }
-    .IniciarSesion {
-        width: auto;
-        padding: 10px;
-        top: 15px;
-        right: 10px;
-    }
     .container {
         display: flex;
         justify-content: space-between;
         padding: 5px;
-    }
-    .nombrejuego h1{
-        font-size: 50px;
-        position:absolute;
-        margin-top: -90px;
-        margin-left: 50%; 
-
     }
     .textoinicio{
         display: flex;
@@ -843,10 +829,8 @@ padding: 0px;
 
 @media screen and (max-width: 576px) {
     .nombrejuego h1{
-        font-size: 30px;
-        position:absolute;
-        margin-top: -110px;
-        margin-left: 30%; 
+    top: 35%;
+    left: 90%;
     }
     .personajes{
         width: 100%;

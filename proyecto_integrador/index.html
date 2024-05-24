@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>"NOMBRE JUEGO” | Web Oficial | Open System Gaming</title>
+    <title>"La profecía del fénix” | Web Oficial | Open System Gaming</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="shortcut icon" href="icon/faviconarriba.jpg" type="image/x-icon"> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -11,28 +11,27 @@
 </head>
 <body id="index">
     <!-- Menú superior -->
-    <div class="menu-toggle">
-        <div class="hamburger"></div>
-      </div>
-    <nav class="menu">
-        <div class="logo">
-            <img src="icon/faviconfenix.png" alt="Logo">
-        </div>
-
-        <div class="menuhamburguer">
-
-        <ul class="nav-links">
+   <header>
+    <img class="logo" src="icon/faviconfenix.png" alt="Logo">
+    <button class="abrir-menu" id="abrir"> <img class="entrar" src="icon/menu.png" alt="entrar"></button>
+    <nav class="nav" id="nav">
+        <button class="cerrar-menu" id="cerrar"><img class="salir" src="icon/salir.png" alt="salir"></button>
+        <div class="menu">
+        <ul class="nav-lista">
             <li><a href="#quienes-somos">Quiénes Somos</a></li>
             <li><a href="#noticias">Noticias</a></li>
              <li><a href="#personajes">Personajes</a></li>
              <li><a href="#juegos">Juegos</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
-        <div class="auth-links">
+    </div>
+        <div class="autolinks">
             <a href="iniciarSesion.html">Inicio de Sesión</a>
             <a href="registrarse.html">Registrar</a>
         </div>
+
     </nav>
+   </header>
     <!-- Secciones de la página -->
   <!--imagen-->
         <div class="container2"> </div>
@@ -60,7 +59,7 @@
                 las tendencias emergentes para ofrecer juegos relevantes y emocionantes.</p>
             <p>Únete a Open System Gaming y descubre cómo estamos revolucionando el mundo del gaming.</p>
             </div>
-            <img class="imagensomos" src="img/quienesomos.png">
+            <img class="imagensomos" src="img/fenixinicio.jpg">
         </section>
         <hr class="barra">
         <!--div noticias-->
@@ -73,26 +72,27 @@
             <div class="container3">
                 <div class="card" style="--clr: #009688;">
                 <div class="imgBx">
-                    <img src="img/zeldanoticia.png" alt="">
+                    <img src="img/noticiauno.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h2>"La Era de la Magia Renace"</h2>
-                    <p>El nuevo juego de rol "El Ascenso de Solarii" transporta a los 
-                    jugadores a un mundo donde la magia ha regresado tras siglos de olvido, 
-                    enfrentándose a criaturas míticas y desentrañando secretos ancestrales 
-                    para restaurar el equilibrio del mundo.</p>
+                    <h2>El Épico Juego "Reino en Llamas" Anuncia su Fecha de Lanzamiento</h2>
+                    <p>Firestorm Studios revela la fecha de lanzamiento de "Reino 
+                    en Llamas", un juego de rol ambientado en un reino medieval 
+                    envuelto en llamas. Únete al combate como un valiente 
+                    caballero y lucha contra dragones incendiarios. Disponible 
+                    el 1 de diciembre de 2024 en todas las plataformas principales.</p>
                 </div>
                 </div>
                 <div class="card" style="--clr: #009688;">
                 <div class="imgBx">
-                    <img src="img/pionner.jpg" alt="">
+                    <img src="img/noticiados.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h2>"CiberPunk: Ciudad Sin Futuro"</h2>
-                    <p>"CiberPunk: Ciudad Sin Futuro" sumerge a los jugadores en una 
-                    metrópolis distópica plagada de corrupción y tecnología avanzada, 
-                    donde deberán sobrevivir y prosperar en un entorno de intriga, hackeo 
-                    y combate callejero.</p>
+                    <h2>"El Guardián del Fuego Eterno" Revoluciona el Género de Fantástica</h2>
+                    <p>Phoenix Forge Games redefine la fantasía con "El Guardián del Fuego Eterno". 
+                    Sumérgete en un mundo de volcanes y fuego, donde un guerrero elemental debe 
+                    dominar el poder del fuego para restaurar el equilibrio. Disponible en enero 
+                    de 2025 para consolas y PC, promete una experiencia de combate envolvente.</p>
                 </div>
                 </div>
                 </div>
@@ -201,14 +201,6 @@
                 <a href="#">Book Now</a>
                 </div>
                 </div>
-                <!--juego 2-->
-                <div class="box">
-                    <img src="img/Aetherium.jpg" alt="">
-                    <div class="overlay">
-                    <h3>Aetherium: Chronicles of the Skylands</h3>
-                    <a href="#">Book Now</a>
-                </div>
-                    </div>
                     <!--juego 3-->
                 <div class="box">
                     <img src="img/Wyrmwood.jpg" alt="">
@@ -303,6 +295,18 @@ document.addEventListener('DOMContentLoaded', actualizarPersonajes);
         }
     });
 });  
+    </script>
+      <script>
+    const nav = document.querySelector("#nav");
+    const abrir = document.querySelector("#abrir");
+    const cerrar = document.querySelector("#cerrar");
+
+    abrir.addEventListener("click", () => {
+    nav.classList.add("visible");
+    })   
+    cerrar.addEventListener("click", () => {
+    nav.classList.remove("visible");
+    })
     </script>
 </body>
 </html>
